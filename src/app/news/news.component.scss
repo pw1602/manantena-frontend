@@ -1,0 +1,36 @@
+.news {
+    width: 69%;
+    float: left;
+}
+
+.news-small {
+    text-align: left;
+
+    h5 {
+        text-align: center;
+        background-color: #1cbf6d;
+        color: white;
+    }
+
+    li {
+        background-color: #39a670;
+        color: white;
+
+        .badge {
+            margin-right: 10px;
+        }
+    }
+}
+
+.news-big-news {
+    h3 {
+        text-align: left;
+        background-color: #bf1c1c;
+        color: white;
+    }
+
+    .blockquote-footer {
+        text-align: left;
+        font-size: 12px;
+    }
+}
