@@ -1,4 +1,10 @@
 <app-navbar></app-navbar>
 <app-carousel></app-carousel>
-<app-rightpanel></app-rightpanel>
-<router-outlet></router-outlet>
+
+<div class="clearfix">
+    <app-rightpanel></app-rightpanel>
+
+    <div id="main" class="shadow p-3 mb-5 bg-white rounded">
+        <router-outlet></router-outlet>
+    </div>
+</div>

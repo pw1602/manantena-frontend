@@ -8,10 +8,12 @@ import { RightpanelComponent } from './rightpanel/rightpanel.component';
 import { NewsComponent } from './news/news.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { OnlineComponent } from './online/online.component';
 
 const appRoutes: Routes = [
 	{path: '', redirectTo: '/', pathMatch: 'full'},
-	{path: '', component: NewsComponent}
+	{path: '', component: NewsComponent},
+	{path: 'online', component: OnlineComponent}
 ]
 
 @NgModule({
@@ -20,7 +22,8 @@ const appRoutes: Routes = [
 		RightpanelComponent,
 		NewsComponent,
 		NavbarComponent,
-		CarouselComponent
+		CarouselComponent,
+		OnlineComponent
 	],
 	imports: [
 		RouterModule.forRoot(

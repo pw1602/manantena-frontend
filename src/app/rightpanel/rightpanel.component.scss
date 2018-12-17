@@ -2,17 +2,15 @@
     width: 29%;
     float: right;
 
-    h5 {
-        padding: 5px;
-        background-color: #bf1c1c;
-        color: white;
-    }
-
     ul {
         text-align: left;
     }
 }
 
-.info-raid li .badge {
-    margin-right: 10px;
+.info-raid {
+    li {
+        .badge {
+            margin-right: 10px;
+        }
+    }
 }
