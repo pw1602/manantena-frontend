@@ -1,0 +1,20 @@
+<div class="news">
+	<div class="news-small mb-4">
+		<h5 class="list-group-item">What's new?</h5>
+		<ul class="list-group">
+			<li class="list-group-item" *ngFor="let news of SMALL_NEWS_LIST">
+				<span class="badge badge-light">{{news.date}}</span> {{news.content}}
+			</li>
+	</ul>
+	</div>
+
+	<div class="news-big">
+		<div class="news-big-news" *ngFor="let news of NEWS_LIST">
+			<h3 class="rounded p-2 pl-4 bg-red">#{{news.id}} {{news.title | titlecase}}</h3>
+			<blockquote class="blockquote">
+				<p>{{news.content}}</p>
+				<footer class="blockquote-footer">{{news.author}} | {{news.date}}</footer>
+			</blockquote>
+		</div>
+	</div>
+</div>
