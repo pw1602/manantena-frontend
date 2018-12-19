@@ -1,0 +1,22 @@
+nav {
+	background-color: #051200;
+	border: 2px solid green;
+	border-radius: 5px;
+
+	.nav-item {
+		background-color: #051200;
+	}
+
+	.dropdown-menu {
+		background-color: #051200;
+		border: 1px solid #223819 !important;
+
+		a:hover {
+			background-color: #162c0d;
+		}
+
+		.active {
+			background-color: #162c0d;
+		}
+	}
+}

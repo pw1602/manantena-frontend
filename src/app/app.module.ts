@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { OnlineComponent } from './components/online/online.component';
 import { PlayerInfoComponent } from './components/player-info/player-info.component';
+import { ReversePipe } from './pipes/reverse.pipe';
 
 const appRoutes: Routes = [
 	{path: '', redirectTo: '/', pathMatch: 'full'},
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
 		NavbarComponent,
 		CarouselComponent,
 		OnlineComponent,
-		PlayerInfoComponent
+		PlayerInfoComponent,
+		ReversePipe
 	],
 	imports: [
 		RouterModule.forRoot(

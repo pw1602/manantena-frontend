@@ -1,15 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*
+	Colors: darker -> brighter
+	#051200, #0c1f05, #162c0d, #223819
+*/
+
 body {
 	text-align: center;
-	background-color: #1c6dbf;
+	background-color: #051200;
+	color: white;
+}
+
+.border-top {
+	margin: auto;
+	border-top: 1px solid #223819 !important;
+}
+
+.border-bottom {
+	margin: auto;
+	border-bottom: 1px solid #223819 !important;
+}
+
+.border-title {
+	border-top: 1px solid #223819 !important;
+	border-bottom: 1px solid #223819 !important;
+	background-color: #0c1f05;
 }
 
 #footer {
-    color: white;
+	width: 60%;
+	margin: auto;
 }
 
-.bg-red {
-	padding: 5px;
-	background-color: #bf1c1c;
+form {
+	input {
+		background-color: #051200 !important;
+		border-color: #223819 !important;
+		color: white !important;
+	}
+
+	::placeholder {
+		color: white !important;
+	}
+}
+
+a {
+	color: green !important;
+}
+
+a:hover {
+	color: white !important;
+}
+
+button {
+	background-color: #0c1f05 !important;
+	border: 1px solid #223819 !important;
+	color: green;
+}
+
+button:hover {
 	color: white;
+	background-color: #223819;
+}
+
+table {
+	width: 100%;
+	padding: 3px;
+	border: 1px solid #223819;
+
+	thead * {
+		padding: 10px;
+		border: 1px solid #223819;
+		background-color: #0c1f05;
+	}
+
+	tbody tr, td{
+		padding: 20px;
+		border: 1px solid #223819;
+		background-color: #162c0d;
+	}
 }
