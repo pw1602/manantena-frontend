@@ -1,22 +1,24 @@
+@import '../../global.scss';
+
 nav {
-	background-color: #051200;
-	border: 2px solid green;
+	background-color: $bg-darkest-green;
+	border: 2px solid $green-light;
 	border-radius: 5px;
 
 	.nav-item {
-		background-color: #051200;
+		background-color: $bg-darkest-green;
 	}
 
 	.dropdown-menu {
-		background-color: #051200;
-		border: 1px solid #223819 !important;
+		background-color: $bg-darkest-green;
+		border: 1px solid $green-light !important;
 
 		a:hover {
-			background-color: #162c0d;
+			background-color: $bg-light-green;
 		}
 
 		.active {
-			background-color: #162c0d;
+			background-color: $bg-light-green;
 		}
 	}
 }

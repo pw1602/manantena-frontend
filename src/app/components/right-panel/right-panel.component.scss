@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .info {
     width: 29%;
     float: right;
@@ -9,7 +11,7 @@
 
 .info-raid {
     li {
-		background-color: #162c0d;
+		background-color: $bg-light-green;
 
         .badge {
             margin-right: 10px;

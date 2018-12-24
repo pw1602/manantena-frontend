@@ -1,23 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule , FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RightpanelComponent } from './components/rightpanel/rightpanel.component';
+import { RightpanelComponent } from './components/right-panel/right-panel.component';
 import { NewsComponent } from './components/news/news.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { OnlineComponent } from './components/online/online.component';
 import { PlayerInfoComponent } from './components/player-info/player-info.component';
 import { ReversePipe } from './pipes/reverse.pipe';
-
-const appRoutes: Routes = [
-	{path: '', redirectTo: '/', pathMatch: 'full'},
-	{path: '', component: NewsComponent},
-	{path: 'online', component: OnlineComponent},
-	{path: 'player', component: PlayerInfoComponent}
-]
+import { AccountPanelComponent } from './components/account-panel/account-panel.component';
+import { AccountDetailsComponent } from './components/account-details/account-details.component';
 
 @NgModule({
 	declarations: [
@@ -28,14 +24,16 @@ const appRoutes: Routes = [
 		CarouselComponent,
 		OnlineComponent,
 		PlayerInfoComponent,
-		ReversePipe
+		ReversePipe,
+		AccountPanelComponent,
+		AccountDetailsComponent
 	],
 	imports: [
-		RouterModule.forRoot(
-			appRoutes
-		),
 		BrowserModule,
-		AppRoutingModule
+		AppRoutingModule,
+		HttpClientModule,
+		ReactiveFormsModule,
+		FormsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

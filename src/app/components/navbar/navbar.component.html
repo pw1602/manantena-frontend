@@ -6,41 +6,48 @@
 	<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
 		<ul class="navbar-nav">
 			<li class="nav-item active">
-				<a class="nav-link" routerLink="/" routerLinkActive="active">News <span class="sr-only">(current)</span></a>
+				<a class="nav-link" routerLink="/"><i class="fas fa-newspaper"></i> News <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" routerLink="/forum"><i class="fas fa-pencil-ruler"></i> Forum</a>
 			</li>
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
+				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i> Community</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 					<a class="dropdown-item" routerLink="/online" routerLinkActive="active">Who is online?</a>
-					<a class="dropdown-item" href="#">Guilds</a>
-					<a class="dropdown-item" href="#">Gallery</a>
-					<a class="dropdown-item" href="#">Forum</a>
-					<a class="dropdown-item" href="#">Support</a>
+					<a class="dropdown-item" routerLink="/guilds">Guilds</a>
+					<a class="dropdown-item" routerLink="/gallery">Gallery</a>
+					<a class="dropdown-item" routerLink="/support">Support</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Library</a>
+				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i> Library</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" href="#">Rules</a>
-					<a class="dropdown-item" href="#">FAQ</a>
-					<a class="dropdown-item" href="#">Server informations</a>
-					<a class="dropdown-item" href="#">Download</a>
-					<a class="dropdown-item" href="#">Achievements</a>
+					<a class="dropdown-item" routerLink="/rules">Rules</a>
+					<a class="dropdown-item" routerLink="/faq">FAQ</a>
+					<a class="dropdown-item" routerLink="/serverinfo">Server Informations</a>
+					<a class="dropdown-item" routerLink="/download">Download</a>
+					<a class="dropdown-item" routerLink="/achievements">Achievements</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rankings</a>
+				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-address-book"></i> Rankings</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" href="#">Top</a>
-					<a class="dropdown-item" href="#">Quests</a>
-					<a class="dropdown-item" href="#">Achievements</a>
-					<a class="dropdown-item" href="#">Guilds</a>
+					<a class="dropdown-item" routerLink="/ranking/top">Top</a>
+					<a class="dropdown-item" routerLink="/ranking/quests">Quests</a>
+					<a class="dropdown-item" routerLink="/ranking/achievements">Achievements</a>
+					<a class="dropdown-item" routerLink="/ranking/guilds">Guilds</a>
 				</div>
 			</li>
 		</ul>
 	</div>
 	<form class="form-inline my-2 my-lg-0">
-		<input class="form-control mr-sm-2" type="search" placeholder="Character name..." aria-label="Serach">
+		<div class="input-group">
+			<div class="input-group-prepend">
+				<div class="input-group-text"><i class="fas fa-search"></i></div>
+			</div>
+			<input class="form-control mr-sm-2" type="search" placeholder="Character name..." aria-label="Serach">
+		</div>
 		<button class="btn my-2 my-sm-0" type="submit">Search</button>
 	</form>
 </nav>

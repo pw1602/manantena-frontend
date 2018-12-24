@@ -5,26 +5,28 @@
 	#051200, #0c1f05, #162c0d, #223819
 */
 
+@import 'app/global';
+
 body {
 	text-align: center;
-	background-color: #051200;
+	background-color: $bg-darkest-green;
 	color: white;
 }
 
 .border-top {
 	margin: auto;
-	border-top: 1px solid #223819 !important;
+	border-top: 1px solid $green-light !important;
 }
 
 .border-bottom {
 	margin: auto;
-	border-bottom: 1px solid #223819 !important;
+	border-bottom: 1px solid $green-light !important;
 }
 
 .border-title {
-	border-top: 1px solid #223819 !important;
-	border-bottom: 1px solid #223819 !important;
-	background-color: #0c1f05;
+	border-top: 1px solid $green-light !important;
+	border-bottom: 1px solid $green-light !important;
+	background-color: $bg-dark-green;
 }
 
 #footer {
@@ -34,49 +36,62 @@ body {
 
 form {
 	input {
-		background-color: #051200 !important;
-		border-color: #223819 !important;
+		background-color: $bg-darkest-green !important;
+		border-color: $green-light !important;
 		color: white !important;
-	}
 
-	::placeholder {
-		color: white !important;
+		&::placeholder {
+			color: grey;
+		}
+
+		&.ng-invalid.ng-touched {
+			border: 1px solid rgb(99, 0, 0) !important;
+		}
 	}
+}
+
+.invalid-text {
+	color: rgb(175, 0, 0);
+}
+
+.input-group-text {
+	background-color: $bg-darkest-green;
+	border: 1px solid $green-light;
 }
 
 a {
-	color: green !important;
-}
+	color: $green-bright !important;
 
-a:hover {
-	color: white !important;
+	&:hover {
+		color: white !important;
+	}
 }
 
 button {
-	background-color: #0c1f05 !important;
-	border: 1px solid #223819 !important;
-	color: green;
-}
+	background-color: $bg-dark-green !important;
+	border: 1px solid $green-light !important;
+	color: $green-bright;
 
-button:hover {
-	color: white;
-	background-color: #223819;
+	&:hover {
+		color: white;
+		background-color: $green-light !important;
+	}
 }
 
 table {
 	width: 100%;
 	padding: 3px;
-	border: 1px solid #223819;
+	border: 1px solid $green-light;
 
 	thead * {
 		padding: 10px;
-		border: 1px solid #223819;
-		background-color: #0c1f05;
+		border: 1px solid $green-light;
+		background-color: $bg-dark-green;
 	}
 
-	tbody tr, td{
+	tbody tr td{
 		padding: 20px;
-		border: 1px solid #223819;
-		background-color: #162c0d;
+		border: 1px solid $green-light;
+		background-color: $bg-light-green;
 	}
 }

@@ -1,0 +1,44 @@
+<div class="info-account p-3 mb-3">
+	<h5 class="center rounded border-title p-2">Account Panel</h5>
+	<div *ngIf="!loginService.isLoggedIn()">
+		<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+			<div class="form-group">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<div class="input-group-text"><i class="fas fa-user"></i></div>
+					</div>
+					<input type="password" class="form-control" formControlName="login" placeholder="Type your login..." required>
+				</div>
+				<div *ngIf="f.login.invalid && (f.login.dirty || f.login.touched)">
+					<small class="invalid-text" *ngIf="f.login.errors.required">Login is required!</small>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<div class="input-group-text"><i class="fas fa-key"></i></div>
+					</div>
+					<input type="password" class="form-control" formControlName="password" placeholder="Type your password..." required>
+				</div>
+				<div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched)">
+					<small class="invalid-text" *ngIf="f.password.errors.required">Password is required!</small>
+				</div>
+			</div>
+			<button type="submit" class="btn">Submit</button>
+		</form>
+		<div>
+			<br/>
+			<small id="login-small" class="form-text text-muted"><a href="#">Don't have an account? Sign up!</a></small>
+			<small id="password-small" class="form-text text-muted"><a href="#">Forgot password or login? Recover it!</a></small>
+		</div>
+	</div>
+
+	<div *ngIf="loginService.isLoggedIn()">
+		<ul>
+			<li><a routerLink="/account">Account Details</a></li>
+			<li>Create Character</li>
+			<li>Refferals</li>
+			<li><a routerLink="" (click)="onLogout()">Logout</a></li>
+		</ul>
+	</div>
+</div>
