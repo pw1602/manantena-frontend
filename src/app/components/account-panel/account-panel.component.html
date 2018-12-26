@@ -1,6 +1,7 @@
 <div class="info-account p-3 mb-3">
 	<h5 class="center rounded border-title p-2">Account Panel</h5>
 	<div *ngIf="!loginService.isLoggedIn()">
+		<small>Test Accounts: user/user</small>
 		<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 			<div class="form-group">
 				<div class="input-group">
@@ -35,8 +36,8 @@
 
 	<div *ngIf="loginService.isLoggedIn()">
 		<ul>
-			<li><a routerLink="/account">Account Details</a></li>
-			<li>Create Character</li>
+			<li><a routerLink="/account/details">Account Details</a></li>
+			<li><a routerLink="/account/create_character">Create Character</a></li>
 			<li>Refferals</li>
 			<li><a routerLink="" (click)="onLogout()">Logout</a></li>
 		</ul>

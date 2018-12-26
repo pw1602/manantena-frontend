@@ -6,15 +6,18 @@ import { OnlineComponent } from './components/online/online.component';
 import { PlayerInfoComponent } from './components/player-info/player-info.component';
 import { LoginRouteGuard } from './guards/login-route.guard';
 import { AccountDetailsComponent } from './components/account-details/account-details.component';
+import { CreateCharacterComponent } from './components/create-character/create-character.component';
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/', pathMatch: 'full' },
 	{ path: '', component: NewsComponent },
 	{ path: 'online', component: OnlineComponent },
 	{ path: 'player', component: PlayerInfoComponent, },
-	{ path: 'account', canActivate: [LoginRouteGuard], component: AccountDetailsComponent, children: [
-		/*{ path: 'add_character' },
-		{ path: 'refferals' }*/
+	{ path: 'account', canActivate: [LoginRouteGuard], children: [
+		{ path: '', redirectTo: 'details', pathMatch: 'full' },
+		{ path: 'details', component: AccountDetailsComponent },
+		{ path: 'create_character', component: CreateCharacterComponent },
+		/*{ path: 'refferals' }*/
 	]}
 ];
 

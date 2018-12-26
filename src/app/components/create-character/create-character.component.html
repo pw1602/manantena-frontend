@@ -1,0 +1,37 @@
+<h5 class="border-title p-2 mb-4 rounded">Create Character</h5>
+<form>
+	<div class="form-group row">
+		<label for="name" class="col-sm-3 col-form-label">Character Name</label>
+		<div class="col-sm-5">
+			<input type="text" class="form-control" id="name" placeholder="Type character name...">
+		</div>
+	</div>
+	<fieldset class="form-group">
+		<div class="row">
+			<legend class="col-form-label col-sm-3 pt-0">Vocation</legend>
+			<div class="col-sm-6">
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="knight" id="knight" value="knight">
+					<label class="form-check-label" for="knight">Knight</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="paladin" id="paladin" value="paladin">
+					<label class="form-check-label" for="paladin">Paladin</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="sorcerer" id="sorcerer" value="sorcerer">
+					<label class="form-check-label" for="sorcerer">Sorcerer</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="druid" id="druid" value="druid">
+					<label class="form-check-label" for="druid">Druid</label>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+	<div class="form-group row">
+		<div class="col-sm-3">
+			<button type="submit" class="btn">Create</button>
+		</div>
+	</div>
+</form>

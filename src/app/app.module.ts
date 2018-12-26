@@ -14,6 +14,7 @@ import { PlayerInfoComponent } from './components/player-info/player-info.compon
 import { ReversePipe } from './pipes/reverse.pipe';
 import { AccountPanelComponent } from './components/account-panel/account-panel.component';
 import { AccountDetailsComponent } from './components/account-details/account-details.component';
+import { CreateCharacterComponent } from './components/create-character/create-character.component';
 
 @NgModule({
 	declarations: [
@@ -26,7 +27,8 @@ import { AccountDetailsComponent } from './components/account-details/account-de
 		PlayerInfoComponent,
 		ReversePipe,
 		AccountPanelComponent,
-		AccountDetailsComponent
+		AccountDetailsComponent,
+		CreateCharacterComponent
 	],
 	imports: [
 		BrowserModule,
