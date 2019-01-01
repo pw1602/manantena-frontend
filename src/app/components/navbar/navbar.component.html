@@ -14,20 +14,20 @@
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i> Community</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" routerLink="/online" routerLinkActive="active">Who is online?</a>
-					<a class="dropdown-item" routerLink="/guilds">Guilds</a>
-					<a class="dropdown-item" routerLink="/gallery">Gallery</a>
-					<a class="dropdown-item" routerLink="/support">Support</a>
+					<a class="dropdown-item" routerLink="/community/online" routerLinkActive="active">Who is online?</a>
+					<a class="dropdown-item" routerLink="/community/guilds">Guilds</a>
+					<a class="dropdown-item" routerLink="/community/gallery">Gallery</a>
+					<a class="dropdown-item" routerLink="/community/support">Support</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i> Library</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" routerLink="/rules">Rules</a>
-					<a class="dropdown-item" routerLink="/faq">FAQ</a>
-					<a class="dropdown-item" routerLink="/serverinfo">Server Informations</a>
-					<a class="dropdown-item" routerLink="/download">Download</a>
-					<a class="dropdown-item" routerLink="/achievements">Achievements</a>
+					<a class="dropdown-item" routerLink="/library/rules">Rules</a>
+					<a class="dropdown-item" routerLink="/library/faq">FAQ</a>
+					<a class="dropdown-item" routerLink="/library/serverinfo">Server Informations</a>
+					<a class="dropdown-item" routerLink="/library/download">Download</a>
+					<a class="dropdown-item" routerLink="/library/achievements">Achievements</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
@@ -41,12 +41,12 @@
 			</li>
 		</ul>
 	</div>
-	<form class="form-inline my-2 my-lg-0">
+	<form class="form-inline my-2 my-lg-0" [formGroup]="searchForm" (ngSubmit)="onSearch()">
 		<div class="input-group">
 			<div class="input-group-prepend">
 				<div class="input-group-text"><i class="fas fa-search"></i></div>
 			</div>
-			<input class="form-control mr-sm-2" type="search" placeholder="Character name..." aria-label="Serach">
+			<input class="form-control mr-sm-2" type="search" formControlName="name" placeholder="Character name..." aria-label="Serach">
 		</div>
 		<button class="btn my-2 my-sm-0" type="submit">Search</button>
 	</form>

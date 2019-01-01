@@ -1,67 +1,70 @@
-<h5 class="border-title p-2 rounded">Profile Informations</h5>
-<table>
-	<thead>
-		<tr>
-			<th scope="col">Name</th>
-			<th scope="col">Sex</th>
-			<th scope="col">Level</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>{{player.name}}</td>
-			<td>{{player.sex}}</td>
-			<td>{{player.level}}</td>
-		</tr>
-		<tr>
-			<td>Town</td>
-			<td colspan="2">{{player.town}}</td>
-		</tr>
-		<tr>
-			<td>Guild</td>
-			<td colspan="2">{{player.guild}}</td>
-		</tr>
-		<tr>
-			<td>House</td>
-			<td colspan="2">{{player.house}}</td>
-		</tr>
-		<tr>
-			<td>Created</td>
-			<td colspan="2">{{player.created}}</td>
-		</tr>
-		<tr>
-			<td>Last Login</td>
-			<td colspan="2">{{player.lastlogin}}</td>
-		</tr>
-		<tr>
-			<td>Account Status</td>
-			<td colspan="2">{{player.status}}</td>
-		</tr>
-		<tr>
-			<td colspan="3">Skills</td>
-		</tr>
-		<tr>
-			<td colspan="3">
-				<table>
-					<thead>
-						<tr>
-							<th scope="col">Magic Level</th>
-							<th scope="col">Fist Fighting</th>
-							<th scope="col">Sword Fighting</th>
-							<th scope="col">Club Fighting</th>
-							<th scope="col">Axe Fighting</th>
-							<th scope="col">Distance Fighting</th>
-							<th scope="col">Shielding</th>
-							<th scope="col">Fishing</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td *ngFor="let skill of player.skills">{{skill}}</td>
-						</tr>
-					</tbody>
-				</table>
-			</td>
-		</tr>
-	</tbody>
-</table>
+<div *ngIf="player == undefined">
+	<h5 class="border-title p-2 rounded">There is no player of that name!</h5>
+</div>
+
+<div *ngIf="player != undefined">
+	<h5 class="border-title p-2 rounded">Player Informations</h5>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">Name</th>
+				<th scope="col">Sex</th>
+				<th scope="col">Level</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{player.name}}</td>
+				<td>{{player.sex}}</td>
+				<td>{{player.level}}</td>
+			</tr>
+			<tr>
+				<td>Town</td>
+				<td colspan="2">{{player.town}}</td>
+			</tr>
+			<tr>
+				<td>Guild</td>
+				<td colspan="2">{{player.guild}}</td>
+			</tr>
+			<tr>
+				<td>House</td>
+				<td colspan="2">{{player.house}}</td>
+			</tr>
+			<tr>
+				<td>Created</td>
+				<td colspan="2">{{player.created}}</td>
+			</tr>
+			<tr>
+				<td>Last Login</td>
+				<td colspan="2">{{player.lastlogin}}</td>
+			</tr>
+			<tr>
+				<td>Account Status</td>
+				<td colspan="2">{{player.status}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h5 class="border-title p-2 mt-3 rounded">Skills</h5>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">Magic Level</th>
+				<th scope="col">Fist Fighting</th>
+				<th scope="col">Sword Fighting</th>
+				<th scope="col">Club Fighting</th>
+				<th scope="col">Axe Fighting</th>
+				<th scope="col">Distance Fighting</th>
+				<th scope="col">Shielding</th>
+				<th scope="col">Fishing</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td *ngFor="let skill of player.skills">{{skill}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h5 class="border-title p-2 mt-3 rounded">Deaths</h5>
+</div>
