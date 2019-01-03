@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 import { LoginService } from '../../../services/login.service';
+import { FormControlService } from '../../../services/form-control.service';
 
 @Component({
 	selector: 'app-account-panel',
@@ -13,7 +14,8 @@ export class AccountPanelComponent implements OnInit {
 
 	constructor(
 		private formBuilder: FormBuilder,
-		private loginService: LoginService
+		private loginService: LoginService,
+		private formService: FormControlService
 	) { }
 
 	ngOnInit() {
@@ -23,15 +25,14 @@ export class AccountPanelComponent implements OnInit {
 		});
 	}
 
-	get f() { return this.loginForm.controls; }
+	get f() { return this.loginForm.controls }
 
 	onSubmit() {
-		const value = this.loginForm.value;
-
-		if (!value.login || !value.password) {
+		if (this.formService.onSubmitCheck(this.loginForm)) {
 			return;
 		}
 
+		const value = this.loginForm.value;
 		if (value.login == 'user' && value.password == 'user') {
 			this.loginService.login(value.login, (new Date().getTime() + 3600000).toString());
 			this.loginForm.reset();
@@ -40,5 +41,6 @@ export class AccountPanelComponent implements OnInit {
 
 	onLogout() {
 		this.loginService.logout();
+		this.loginForm.reset();
 	}
 }

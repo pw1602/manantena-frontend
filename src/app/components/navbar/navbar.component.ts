@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import { FormControlService } from '../../services/form-control.service';
+
 @Component({
 	selector: 'app-navbar',
 	templateUrl: './navbar.component.html',
@@ -14,7 +16,8 @@ export class NavbarComponent implements OnInit {
 
 	constructor(
 		private formBuilder: FormBuilder,
-		private router: Router
+		private router: Router,
+		private formService: FormControlService
 	) { }
 
 	ngOnInit() {
@@ -26,7 +29,10 @@ export class NavbarComponent implements OnInit {
 	get f() { return this.searchForm.controls; }
 
 	onSearch() {
+		if (this.formService.onSubmitCheck(this.searchForm)) {
+			return;
+		}
+		
 		this.router.navigate(['/player/' + this.searchForm.value.name]);
-		this.searchForm.reset();
 	}
 }
