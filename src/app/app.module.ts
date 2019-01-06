@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule , FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ import { RankingAchievementsComponent } from './components/ranking/ranking-achie
 import { RankingGuildsComponent } from './components/ranking/ranking-guilds/ranking-guilds.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RecoverComponent } from './components/recover/recover.component';
+import { TimePipe } from './pipes/time.pipe';
 
 @NgModule({
 	declarations: [
@@ -59,9 +61,11 @@ import { RecoverComponent } from './components/recover/recover.component';
 		RankingGuildsComponent,
 		RegisterComponent,
 		RecoverComponent,
+		TimePipe,
 	],
 	imports: [
 		BrowserModule,
+		HttpClientModule,
 		AppRoutingModule,
 		ReactiveFormsModule,
 		FormsModule

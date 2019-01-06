@@ -1,5 +1,5 @@
 <div *ngIf="player == undefined">
-	<h5 class="border-title p-2 rounded">There is no player of that name!</h5>
+	<h5 class="border-title p-2 rounded">There is no player with that name!</h5>
 </div>
 
 <div *ngIf="player != undefined">
@@ -15,44 +15,64 @@
 		<tbody>
 			<tr>
 				<td>{{player.name}}</td>
-				<td>{{player.sex}}</td>
+				<td>{{player.sex == 0 ? "Female" : "Male"}}</td>
 				<td>{{player.level}}</td>
 			</tr>
 			<tr>
-				<td>Town</td>
-				<td colspan="2">{{player.town}}</td>
+				<td>Health</td>
+				<td colspan="2">
+					<div class="progress">
+						<div class="progress-bar bg-danger" role="progressbar" [ngStyle]="getBarStyle('hp')">{{player.health}}/{{player.healthmax}}</div>
+					</div>
+				</td>
 			</tr>
 			<tr>
-				<td>Guild</td>
-				<td colspan="2">{{player.guild}}</td>
+				<td>Mana</td>
+				<td colspan="2">
+					<div class="progress">
+						<div class="progress-bar bg-info" role="progressbar" [ngStyle]="getBarStyle('mp')">{{player.mana}}/{{player.manamax}}</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Stamina</td>
+				<td colspan="2">
+					<div class="progress">
+						<div class="progress-bar bg-success" role="progressbar" [ngStyle]="getBarStyle('stamina')">{{getStaminaTime()}} h</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Experience</td>
+				<td colspan="2">
+					<div class="progress">
+						<div class="progress-bar bg-warning" role="progressbar" [ngStyle]="getBarStyle('exp')">{{player.experience}}/{{getNextLevelExperience(player.level + 1)}}</div>
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td>House</td>
 				<td colspan="2">{{player.house}}</td>
 			</tr>
 			<tr>
-				<td>Created</td>
-				<td colspan="2">{{player.created}}</td>
+				<td>Town</td>
+				<td colspan="2">{{player.town_id == 1 ? "Manantena" : "Example"}}</td>
 			</tr>
 			<tr>
 				<td>Last Login</td>
-				<td colspan="2">{{player.lastlogin}}</td>
-			</tr>
-			<tr>
-				<td>Account Status</td>
-				<td colspan="2">{{player.status}}</td>
+				<td colspan="2">{{player.lastlogin | time}}</td>
 			</tr>
 		</tbody>
 	</table>
 
-	<h5 class="border-title p-2 mt-3 rounded">Skills</h5>
+	<h5 class="border-title p-2 mt-5 rounded">Skills</h5>
 	<table>
 		<thead>
 			<tr>
 				<th scope="col">Magic Level</th>
 				<th scope="col">Fist Fighting</th>
-				<th scope="col">Sword Fighting</th>
 				<th scope="col">Club Fighting</th>
+				<th scope="col">Sword Fighting</th>
 				<th scope="col">Axe Fighting</th>
 				<th scope="col">Distance Fighting</th>
 				<th scope="col">Shielding</th>
@@ -61,10 +81,33 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td *ngFor="let skill of player.skills">{{skill}}</td>
+				<td>{{player.maglevel}}</td>
+				<td>{{player.skill_fist}}</td>
+				<td>{{player.skill_club}}</td>
+				<td>{{player.skill_sword}}</td>
+				<td>{{player.skill_axe}}</td>
+				<td>{{player.skill_dist}}</td>
+				<td>{{player.skill_shielding}}</td>
+				<td>{{player.skill_fishing}}</td>
 			</tr>
 		</tbody>
 	</table>
 
-	<h5 class="border-title p-2 mt-3 rounded">Deaths</h5>
+	<h5 class="border-title p-2 mt-5 rounded">Deaths</h5>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">Date</th>
+				<th scope="col">Level</th>
+				<th scope="col">Killed By</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let death of player.deaths; let i = index">
+				<td *ngIf="i < 5">{{death.time | time}}</td>
+				<td *ngIf="i < 5">{{death.level}}</td>
+				<td *ngIf="i < 5">{{death.killed_by}}</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
