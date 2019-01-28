@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RightpanelComponent } from './rightpanel.component';
+import { RightpanelComponent } from './right-panel.component';
 
 describe('RightpanelComponent', () => {
   let component: RightpanelComponent;
