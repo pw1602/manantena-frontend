@@ -9,12 +9,13 @@
 	</div>
 
 	<div class="news-big">
-		<div class="news-big-news" *ngFor="let news of NEWS_LIST | reverse">
+		<div class="news-big-news" *ngFor="let news of newsList">
 			<h3 class="rounded p-2 pl-4 border-title">#{{news.id}} {{news.title | titlecase}}</h3>
 			<blockquote class="blockquote">
 				<p>{{news.content}}</p>
 				<footer class="blockquote-footer">{{news.author}} | {{news.date}}</footer>
 			</blockquote>
 		</div>
+		<p-paginator [rows]="PAGINATION_MAX_ITEMS" [totalRecords]="NEWS_LIST.length" [pageLinkSize]="getPageLinkSize()" [alwaysShow]="false" (onPageChange)="paginate($event) "></p-paginator>
 	</div>
 </div>

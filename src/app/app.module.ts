@@ -2,17 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule , FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PaginatorModule } from 'primeng/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 
+import { AppComponent } from './app.component';
 import { RightpanelComponent } from './components/right-panel/right-panel.component';
 import { NewsComponent } from './components/news/news.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CommunityOnlineComponent } from './components/community/community-online/community-online.component';
 import { PlayerInfoComponent } from './components/player-info/player-info.component';
-import { ReversePipe } from './pipes/reverse.pipe';
 import { AccountPanelComponent } from './components/account/account-panel/account-panel.component';
 import { AccountDetailsComponent } from './components/account/account-details/account-details.component';
 import { AccountCreateCharacterComponent } from './components/account/account-create-character/account-create-character.component';
@@ -31,6 +32,8 @@ import { RankingAchievementsComponent } from './components/ranking/ranking-achie
 import { RankingGuildsComponent } from './components/ranking/ranking-guilds/ranking-guilds.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RecoverComponent } from './components/recover/recover.component';
+
+import { ReversePipe } from './pipes/reverse.pipe';
 import { TimePipe } from './pipes/time.pipe';
 
 @NgModule({
@@ -68,7 +71,9 @@ import { TimePipe } from './pipes/time.pipe';
 		HttpClientModule,
 		AppRoutingModule,
 		ReactiveFormsModule,
-		FormsModule
+		FormsModule,
+		BrowserAnimationsModule,
+		PaginatorModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

@@ -28,3 +28,8 @@
         font-size: 12px;
     }
 }
+
+:host ::ng-deep .ui-paginator {
+	background-color: $bg-dark-green;
+	border: 1px solid $green-light;
+}
