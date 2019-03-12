@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, AbstractControl } from '@angular/forms';
 
 @Injectable({
 	providedIn: 'root'
@@ -7,7 +7,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class FormControlService {
 	constructor() {}
 
-	check(value: FormControl): boolean {
+	check(value: AbstractControl): boolean {
 		if (value.invalid && (value.touched || value.dirty)) {
 			return true;
 		}
@@ -15,7 +15,7 @@ export class FormControlService {
 		return false;
 	}
 
-	getHTMLError(inputValue: FormControl): string {
+	getHTMLError(inputValue: AbstractControl): string {
 		let text = '';
 
 		if (inputValue.errors == null) {

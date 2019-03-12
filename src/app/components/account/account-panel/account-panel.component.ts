@@ -10,12 +10,12 @@ import { FormControlService } from '../../../services/form-control.service';
 	styleUrls: ['./account-panel.component.scss']
 })
 export class AccountPanelComponent implements OnInit {
-	private loginForm: FormGroup;
+	loginForm: FormGroup;
 
 	constructor(
-		private formBuilder: FormBuilder,
-		private loginService: LoginService,
-		private formService: FormControlService
+		public formBuilder: FormBuilder,
+		public loginService: LoginService,
+		public formService: FormControlService
 	) { }
 
 	ngOnInit() {

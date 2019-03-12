@@ -9,9 +9,9 @@ import { FormControlService } from 'src/app/services/form-control.service';
 	styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-	private registerForm: FormGroup;
+	registerForm: FormGroup;
 
-	constructor(private formBuilder: FormBuilder, private formService: FormControlService) {}
+	constructor(public formBuilder: FormBuilder, public formService: FormControlService) {}
 
 	ngOnInit() {
 		this.registerForm = this.formBuilder.group({

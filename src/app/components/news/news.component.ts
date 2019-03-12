@@ -9,14 +9,14 @@ import { DatabaseService } from '../../services/database.service';
 	styleUrls: ['./news.component.scss'],
 })
 export class NewsComponent implements OnInit {
-	private PAGINATION_MAX_ITEMS = 5;
-	private SMALL_NEWSES_MAX_ITEMS = 3;
+	PAGINATION_MAX_ITEMS = 5;
+	SMALL_NEWSES_MAX_ITEMS = 3;
 
 	private reversePipe = new ReversePipe();
-	private newsList = null;
-	private smallNewsList = null;
+	newsList = null;
+	smallNewsList = null;
 
-	constructor(private db: DatabaseService) { }
+	constructor(public db: DatabaseService) { }
 
 	ngOnInit() {
 		this.db.getNewses().subscribe(newses => this.newsList = newses.slice(newses.length - this.PAGINATION_MAX_ITEMS, newses.length));

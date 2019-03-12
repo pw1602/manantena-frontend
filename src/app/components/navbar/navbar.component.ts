@@ -11,13 +11,13 @@ import { FormControlService } from '../../services/form-control.service';
 })
 
 export class NavbarComponent implements OnInit {
-	brand = 'Manantena';
-	private searchForm: FormGroup;
+	brand = 'TugAAC';
+	searchForm: FormGroup;
 
 	constructor(
-		private formBuilder: FormBuilder,
-		private router: Router,
-		private formService: FormControlService
+		public formBuilder: FormBuilder,
+		public router: Router,
+		public formService: FormControlService
 	) { }
 
 	ngOnInit() {

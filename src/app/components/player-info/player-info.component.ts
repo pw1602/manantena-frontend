@@ -10,9 +10,9 @@ import { PlayerService } from '../../services/player.service';
 	styleUrls: ['./player-info.component.scss']
 })
 export class PlayerInfoComponent implements OnInit {
-	private player: Player;
+	player: Player;
 
-	constructor(private playerService: PlayerService, private activatedRoute: ActivatedRoute) {}
+	constructor(public playerService: PlayerService, private activatedRoute: ActivatedRoute) {}
 
 	ngOnInit() {
 		this.activatedRoute.params.subscribe(param => {
