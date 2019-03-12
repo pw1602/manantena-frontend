@@ -1,8 +1,8 @@
-<div *ngIf="player == undefined">
+<div *ngIf="!player">
 	<h5 class="border-title p-2 rounded">There is no player with that name!</h5>
 </div>
 
-<div *ngIf="player != undefined">
+<div *ngIf="player">
 	<h5 class="border-title p-2 rounded">Player Informations</h5>
 	<table>
 		<thead>

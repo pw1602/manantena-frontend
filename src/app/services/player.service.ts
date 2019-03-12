@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 import { Player } from '../classes/player';
-//import { PLAYERS } from '../mocks/player-mock';
+import { PLAYERS } from '../mocks/player-mock';
 
 @Injectable({
 	providedIn: 'root'
@@ -21,7 +21,15 @@ export class PlayerService {
 		return of(PLAYERS.find(player => player.id === id));
 	}*/
 
-	findPlayerByName(name): Observable<Player> {
+	/*findPlayerByName(name): Observable<Player> {
 		return this.http.get<Player>(this.apiUrl + '/player/' + name);
+	}*/
+
+	getPlayersCountInDatabase(): number {
+		return PLAYERS.length;
+	}
+
+	findPlayerByName(name): Observable<Player> {
+		return of(PLAYERS.find(player => player.name == name));
 	}
 }

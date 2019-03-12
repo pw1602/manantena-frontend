@@ -18,9 +18,12 @@ export class PlayerInfoComponent implements OnInit {
 		this.activatedRoute.params.subscribe(param => {
 			if (param['name']) {
 				this.playerService.findPlayerByName(param['name']).subscribe(data => {
-					this.player = data[0];
-					this.player.deaths = JSON.parse("[" + this.player.deaths + "]");
-					this.player.outfit = `http://outfit-images.ots.me/animatedOutfits1090/animoutfit.php?id=${this.player.looktype}&addons=${this.player.lookaddons}&head=${this.player.lookhead}&body=${this.player.lookbody}&legs=${this.player.looklegs}&feet=${this.player.lookfeet}&mount=0&direction=3`;
+					this.player = data;
+
+					if (this.player) {
+						this.player.deaths = JSON.parse("[" + this.player.deaths + "]");
+						this.player.outfit = `http://outfit-images.ots.me/animatedOutfits1090/animoutfit.php?id=${this.player.looktype}&addons=${this.player.lookaddons}&head=${this.player.lookhead}&body=${this.player.lookbody}&legs=${this.player.looklegs}&feet=${this.player.lookfeet}&mount=0&direction=3`;
+					}
 				});
 			}
 		});

@@ -2,20 +2,20 @@
 	<div class="news-small mb-4">
 		<h5 class="list-group-item">What's new?</h5>
 		<ul class="list-group">
-			<li class="list-group-item" *ngFor="let news of SMALL_NEWS_LIST | reverse">
-				<span class="badge">{{news.date}}</span> {{news.content}}
+			<li class="list-group-item" *ngFor="let news of smallNewsList | reverse; let i = index">
+				<span class="badge">{{news.date}}</span> {{news.content}} <span class="badge badge-success" *ngIf="i == 0">New</span>
 			</li>
 	</ul>
 	</div>
 
 	<div class="news-big">
-		<div class="news-big-news" *ngFor="let news of newsList">
-			<h3 class="rounded p-2 pl-4 border-title">#{{news.id}} {{news.title | titlecase}}</h3>
+		<div class="news-big-news" *ngFor="let news of newsList | reverse; let i = index">
+			<h3 class="rounded p-2 pl-4 border-title">#{{news.id}} {{news.title | titlecase}} <span class="badge badge-success" *ngIf="i == 0">New</span></h3>
 			<blockquote class="blockquote">
 				<p>{{news.content}}</p>
 				<footer class="blockquote-footer">{{news.author}} | {{news.date}}</footer>
 			</blockquote>
 		</div>
-		<p-paginator [rows]="PAGINATION_MAX_ITEMS" [totalRecords]="NEWS_LIST.length" [pageLinkSize]="getPageLinkSize()" [alwaysShow]="false" (onPageChange)="paginate($event) "></p-paginator>
+		<p-paginator [rows]="PAGINATION_MAX_ITEMS" [totalRecords]="db.getNewsesLength()" [pageLinkSize]="getPageLinkSize()" [alwaysShow]="false" (onPageChange)="paginate($event) "></p-paginator>
 	</div>
 </div>

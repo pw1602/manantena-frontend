@@ -38,7 +38,7 @@ export class Player {
         //public status: string = "Premium Account",
 	) {};
 	
-	setPlayerData(data) {
+	/*setPlayerData(data) {
 		this.id = data[0].id;
 		this.name = data[0].name;
 		this.level = data[0].level;
@@ -60,17 +60,17 @@ export class Player {
 		this.stamina = data[0].stamina;
 		this.house = data[0].house;
 		this.deaths = data[0].deaths;
-		/*this.online = data[0].online;
+		this.online = data[0].online;
 		this.marriage = data[0].marriage;
 		this.description = data[0].description;
 
 		data.forEach(data => {
 			this.skills[0] = data.maglevel;
 			this.skills[data.skillid + 1] = data.value;
-		});*/
-	}
+		});
+	}*/
 
-	getNextLevelExperience(): number {
+	/*getNextLevelExperience(): number {
 		return ((50 * Math.pow(this.level, 3)) / 3) - (100 * Math.pow(this.level, 2)) + (850 * this.level / 3) - 200;
-	}
+	}*/
 }

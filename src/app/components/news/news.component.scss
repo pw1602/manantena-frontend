@@ -29,7 +29,29 @@
     }
 }
 
-:host ::ng-deep .ui-paginator {
-	background-color: $bg-dark-green;
-	border: 1px solid $green-light;
+:host ::ng-deep {
+	.ui-paginator {
+		background-color: $bg-dark-green;
+		border: 1px solid $green-light;
+
+		.ui-paginator-first, .ui-paginator-prev, .ui-paginator-next, .ui-paginator-last {
+			&:hover{
+				color: $green-bright !important;
+				background-color: $green-light !important;
+			}
+		}
+
+		.ui-paginator-page {
+			color: white !important;
+	
+			&.ui-state-active {
+				background-color: $green-light !important;
+			}
+
+			&:hover{
+				color: $green-bright !important;
+				background-color: $green-light !important;
+			}
+		}
+	}
 }
