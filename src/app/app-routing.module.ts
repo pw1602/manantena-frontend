@@ -21,10 +21,12 @@ import { RankingGuildsComponent } from './components/ranking/ranking-guilds/rank
 import { AccountRefferalsComponent } from './components/account/account-refferals/account-refferals.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RecoverComponent } from './components/recover/recover.component';
+import { ForumComponent } from './components/forum/forum.component';
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/', pathMatch: 'full' },
 	{ path: '', component: NewsComponent },
+	{ path: 'forum', component: ForumComponent },
 	{ path: 'register', component: RegisterComponent },
 	{ path: 'recover', component: RecoverComponent },
 	{ path: 'community', children: [

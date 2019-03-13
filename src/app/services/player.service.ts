@@ -30,6 +30,6 @@ export class PlayerService {
 	}
 
 	findPlayerByName(name): Observable<Player> {
-		return of(PLAYERS.find(player => player.name == name));
+		return of(PLAYERS.find(player => player.name.toLocaleLowerCase() == name.toLocaleLowerCase()));
 	}
 }

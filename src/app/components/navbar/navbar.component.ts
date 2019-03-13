@@ -4,6 +4,11 @@ import { Router } from '@angular/router';
 
 import { FormControlService } from '../../services/form-control.service';
 
+interface Language {
+	name: string,
+	flag: string
+}
+
 @Component({
 	selector: 'app-navbar',
 	templateUrl: './navbar.component.html',
@@ -13,12 +18,19 @@ import { FormControlService } from '../../services/form-control.service';
 export class NavbarComponent implements OnInit {
 	brand = 'TugAAC';
 	searchForm: FormGroup;
+	languages: Language[];
+	selectedLanguage: Language;
 
 	constructor(
 		public formBuilder: FormBuilder,
 		public router: Router,
 		public formService: FormControlService
-	) { }
+	) {
+		this.languages = [
+			{ name: "English", flag: "english" },
+			{ name: "Polish", flag: "polish" }
+		];
+	}
 
 	ngOnInit() {
 		this.searchForm = this.formBuilder.group({

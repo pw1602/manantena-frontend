@@ -4,6 +4,7 @@ import { ReactiveFormsModule , FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginatorModule } from 'primeng/paginator';
+import { SelectButtonModule } from 'primeng/selectbutton';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -35,6 +36,7 @@ import { RecoverComponent } from './components/recover/recover.component';
 
 import { ReversePipe } from './pipes/reverse.pipe';
 import { TimePipe } from './pipes/time.pipe';
+import { ForumComponent } from './components/forum/forum.component';
 
 @NgModule({
 	declarations: [
@@ -65,6 +67,7 @@ import { TimePipe } from './pipes/time.pipe';
 		RegisterComponent,
 		RecoverComponent,
 		TimePipe,
+		ForumComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -73,7 +76,8 @@ import { TimePipe } from './pipes/time.pipe';
 		ReactiveFormsModule,
 		FormsModule,
 		BrowserAnimationsModule,
-		PaginatorModule
+		PaginatorModule,
+		SelectButtonModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

@@ -11,7 +11,7 @@ import { FormControlService } from 'src/app/services/form-control.service';
 export class RegisterComponent implements OnInit {
 	registerForm: FormGroup;
 
-	constructor(public formBuilder: FormBuilder, public formService: FormControlService) {}
+	constructor(private formBuilder: FormBuilder, public formService: FormControlService) {}
 
 	ngOnInit() {
 		this.registerForm = this.formBuilder.group({
