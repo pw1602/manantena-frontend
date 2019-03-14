@@ -1,15 +1,15 @@
 <div *ngIf="!player">
-	<h5 class="border-title p-2 rounded">There is no player with that name!</h5>
+	<h5 class="border-title p-2 rounded" i18n="Player Info|Message player with specific name not exist@@playerInfoPlayerNotExistMessage">There is no player with that name!</h5>
 </div>
 
 <div *ngIf="player">
-	<h5 class="border-title p-2 rounded">Player Informations</h5>
+	<h5 class="border-title p-2 rounded" i18n="Player Info|Player informations title@@playerInfoTitle">Player Informations</h5>
 	<table>
 		<thead>
 			<tr>
-				<th scope="col">Name</th>
-				<th scope="col">Sex</th>
-				<th scope="col">Level</th>
+				<th scope="col" i18n="Player Info|Name header in table@@playerInfoNameHeader">Name</th>
+				<th scope="col" i18n="Player Info|Sex header in table@@playerInfoSexHeader">Sex</th>
+				<th scope="col" i18n="Player Info|Level header in table@@playerInfoLevelHeader">Level</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -19,7 +19,7 @@
 				<td>{{player.level}}</td>
 			</tr>
 			<tr>
-				<td>Health</td>
+				<td i18n="Player Info|Health header in table@@playerInfoHealthHeader">Health</td>
 				<td colspan="2">
 					<div class="progress">
 						<div class="progress-bar bg-danger" role="progressbar" [ngStyle]="getBarStyle('hp')">{{player.health}}/{{player.healthmax}}</div>
@@ -43,7 +43,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Experience</td>
+				<td i18n="Player Info|Experience header in table@@playerInfoExperienceHeader">Experience</td>
 				<td colspan="2">
 					<div class="progress">
 						<div class="progress-bar bg-warning" role="progressbar" [ngStyle]="getBarStyle('exp')">{{player.experience}}/{{getNextLevelExperience(player.level + 1)}}</div>
@@ -51,21 +51,21 @@
 				</td>
 			</tr>
 			<tr>
-				<td>House</td>
+				<td i18n="Player Info|House header in table@@playerInfoHouseHeader">House</td>
 				<td colspan="2">{{player.house}}</td>
 			</tr>
 			<tr>
-				<td>Town</td>
+				<td i18n="Player Info|Town header in table@@playerInfoTownHeader">Town</td>
 				<td colspan="2">{{player.town_id == 1 ? "Manantena" : "Example"}}</td>
 			</tr>
 			<tr>
-				<td>Last Login</td>
+				<td i18n="Player Info|Last login header in table@@playerInfoLastLoginHeader">Last Login</td>
 				<td colspan="2">{{player.lastlogin | time}}</td>
 			</tr>
 		</tbody>
 	</table>
 
-	<h5 class="border-title p-2 mt-5 rounded">Skills</h5>
+	<h5 class="border-title p-2 mt-5 rounded" i18n="Player Info|Skills header in table@@playerInfoSkillsHeader">Skills</h5>
 	<table>
 		<thead>
 			<tr>
@@ -93,13 +93,13 @@
 		</tbody>
 	</table>
 
-	<h5 class="border-title p-2 mt-5 rounded">Deaths</h5>
+	<h5 class="border-title p-2 mt-5 rounded" i18n="Player Info|Deaths header in table@@playerInfoDeathsHeader">Deaths</h5>
 	<table>
 		<thead>
 			<tr>
-				<th scope="col">Date</th>
-				<th scope="col">Level</th>
-				<th scope="col">Killed By</th>
+				<th scope="col" i18n="Player Info|Deaths date header in table@@playerInfoDeathsDateHeader">Date</th>
+				<th scope="col" i18n="Player Info|Deaths level header in table@@playerInfoDeathsLevelHeader">Level</th>
+				<th scope="col" i18n="Player Info|Deaths killed by header in table@@playerInfoDeathsKilledByHeader">Killed By</th>
 			</tr>
 		</thead>
 		<tbody>

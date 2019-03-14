@@ -34,6 +34,14 @@
         </context-group>
         <note priority="1" from="description">Raids title</note>
         <note priority="1" from="meaning">Righ Panel</note>
+      </trans-unit><trans-unit id="newsSmallNewsesTitle" datatype="html">
+        <source>What's new?</source><target state="new">Co nowego?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/news/news.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Small newses title</note>
+        <note priority="1" from="meaning">News</note>
       </trans-unit><trans-unit id="navNews" datatype="html">
         <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i>"/> News <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(current)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span>"/></source><target state="final"><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i>"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i"/> Aktualności <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span>"/>(current)<x id="CLOSE_TAG_SPAN" ctype="x-span"/></target>
         <context-group purpose="location">
@@ -213,6 +221,158 @@
         </context-group>
         <note priority="1" from="description">Search button</note>
         <note priority="1" from="meaning">Navigation</note>
+      </trans-unit><trans-unit id="communityOnlineTitle" datatype="html">
+        <source>Online Players</source><target state="final">Zalogowani gracze</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/community/community-online/community-online.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Page with online players</note>
+        <note priority="1" from="meaning">Community - Online</note>
+      </trans-unit><trans-unit id="communityOnlineTableNameHeader" datatype="html">
+        <source>Name</source><target state="final">Imię</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/community/community-online/community-online.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Name header in table with online players</note>
+        <note priority="1" from="meaning">Community - Online</note>
+      </trans-unit><trans-unit id="communityOnlineTableLevelHeader" datatype="html">
+        <source>Level</source><target state="final">Poziom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/community/community-online/community-online.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Level header in table with online players</note>
+        <note priority="1" from="meaning">Community - Online</note>
+      </trans-unit><trans-unit id="communityOnlineTableLastLoginHeader" datatype="html">
+        <source>Last Login</source><target state="final">Ostatnie logowanie</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/community/community-online/community-online.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Last login header in table with online players</note>
+        <note priority="1" from="meaning">Community - Online</note>
+      </trans-unit><trans-unit id="playerInfoPlayerNotExistMessage" datatype="html">
+        <source>There is no player with that name!</source><target state="final">Nie znaleziono gracza z tym imieniem!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Message player with specific name not exist</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoTitle" datatype="html">
+        <source>Player Informations</source><target state="final">Informacje o graczu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Player informations title</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoNameHeader" datatype="html">
+        <source>Name</source><target state="final">Imię</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Name header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoSexHeader" datatype="html">
+        <source>Sex</source><target state="final">Płeć</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Sex header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoLevelHeader" datatype="html">
+        <source>Level</source><target state="final">Poziom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Level header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoHealthHeader" datatype="html">
+        <source>Health</source><target state="final">Życie</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Health header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoExperienceHeader" datatype="html">
+        <source>Experience</source><target state="final">Doświadczenie</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">Experience header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoHouseHeader" datatype="html">
+        <source>House</source><target state="final">Dom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <note priority="1" from="description">House header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoTownHeader" datatype="html">
+        <source>Town</source><target state="final">Miasto</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <note priority="1" from="description">Town header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoLastLoginHeader" datatype="html">
+        <source>Last Login</source><target state="final">Ostatnie logowanie</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description">Last login header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoSkillsHeader" datatype="html">
+        <source>Skills</source><target state="final">Umiejętności</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <note priority="1" from="description">Skills header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoDeathsHeader" datatype="html">
+        <source>Deaths</source><target state="final">Śmierci</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+        <note priority="1" from="description">Deaths header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoDeathsDateHeader" datatype="html">
+        <source>Date</source><target state="final">Data</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+        <note priority="1" from="description">Deaths date header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoDeathsLevelHeader" datatype="html">
+        <source>Level</source><target state="final">Poziom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+        <note priority="1" from="description">Deaths level header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
+      </trans-unit><trans-unit id="playerInfoDeathsKilledByHeader" datatype="html">
+        <source>Killed By</source><target state="final">Zabójca</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/player-info/player-info.component.html</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+        <note priority="1" from="description">Deaths killed by header in table</note>
+        <note priority="1" from="meaning">Player Info</note>
       </trans-unit>
       <trans-unit id="accountPanelTitle" datatype="html">
         <source>Account Panel</source><target state="final">Zarządzanie kontem</target>
@@ -468,6 +628,102 @@
         </context-group>
         <note priority="1" from="description">Create character modal window create button</note>
         <note priority="1" from="meaning">Account - Create Character</note>
+      </trans-unit><trans-unit id="communityGuildsTitle" datatype="html">
+        <source>Guilds</source><target state="final">Gildie</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/community/community-guilds/community-guilds.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Page with guilds on server</note>
+        <note priority="1" from="meaning">Community - Guilds</note>
+      </trans-unit><trans-unit id="communityGuildsTableNameHeader" datatype="html">
+        <source>Name</source><target state="final">Nazwa</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/community/community-guilds/community-guilds.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Name header in table with guilds</note>
+        <note priority="1" from="meaning">Community - Guilds</note>
+      </trans-unit><trans-unit id="communityGuildsTableDescriptionHeader" datatype="html">
+        <source>Description</source><target state="final">Opis</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/community/community-guilds/community-guilds.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Description header in table with guilds</note>
+        <note priority="1" from="meaning">Community - Guilds</note>
+      </trans-unit><trans-unit id="communityGuildsTableMembersHeader" datatype="html">
+        <source>Members</source><target state="final">Członkowie</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/community/community-guilds/community-guilds.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Members header in table with guilds</note>
+        <note priority="1" from="meaning">Community - Guilds</note>
+      </trans-unit><trans-unit id="registerTitle" datatype="html">
+        <source>Account Creation</source><target state="final">Tworzenie konta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/register/register.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Register title</note>
+        <note priority="1" from="meaning">Register</note>
+      </trans-unit><trans-unit id="registerLoginLabel" datatype="html">
+        <source>Login</source><target state="final">Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/register/register.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Login label</note>
+        <note priority="1" from="meaning">Register</note>
+      </trans-unit><trans-unit id="registerEmailLabel" datatype="html">
+        <source>Email address</source><target state="final">Adres e-mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/register/register.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Email label</note>
+        <note priority="1" from="meaning">Register</note>
+      </trans-unit><trans-unit id="registerUsernameLabel" datatype="html">
+        <source>Username</source><target state="final">Nazwa użytkownika</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/register/register.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Username label</note>
+        <note priority="1" from="meaning">Register</note>
+      </trans-unit><trans-unit id="registerPasswordLabel" datatype="html">
+        <source>Password</source><target state="final">Hasło</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/register/register.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Password label</note>
+        <note priority="1" from="meaning">Register</note>
+      </trans-unit><trans-unit id="registerReTypePasswordLabel" datatype="html">
+        <source>Retype Password</source><target state="final">Powtórz hasło</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/register/register.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">Re-type password label</note>
+        <note priority="1" from="meaning">Register</note>
+      </trans-unit><trans-unit id="registerAcceptRulesLabel" datatype="html">
+        <source>I accept Server Rules</source><target state="final">Akceptuję regulamin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/register/register.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <note priority="1" from="description">Accepting rules label</note>
+        <note priority="1" from="meaning">Register</note>
+      </trans-unit><trans-unit id="registerRegisterButton" datatype="html">
+        <source>Register</source><target state="final">Zarejestruj</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/register/register.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <note priority="1" from="description">Register button</note>
+        <note priority="1" from="meaning">Register</note>
       </trans-unit>
     </body>
   </file>

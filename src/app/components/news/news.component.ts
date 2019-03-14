@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { ReversePipe } from 'src/app/pipes/reverse.pipe';
 
 import { DatabaseService } from '../../services/database.service';
@@ -16,15 +16,18 @@ export class NewsComponent implements OnInit {
 	newsList = null;
 	smallNewsList = null;
 
-	constructor(public db: DatabaseService) { }
+	constructor(
+		public db: DatabaseService,
+		@Inject(LOCALE_ID) private localeId: string
+	) { }
 
 	ngOnInit() {
-		this.db.getNewses().subscribe(newses => this.newsList = newses.slice(newses.length - this.PAGINATION_MAX_ITEMS, newses.length));
-		this.db.getSmallNewses().subscribe(smallNewses => this.smallNewsList = smallNewses.slice(smallNewses.length - this.SMALL_NEWSES_MAX_ITEMS, smallNewses.length));
+		this.db.getNewses(this.localeId).subscribe(newses => this.newsList = newses.slice(newses.length - this.PAGINATION_MAX_ITEMS, newses.length));
+		this.db.getSmallNewses(this.localeId).subscribe(smallNewses => this.smallNewsList = smallNewses.slice(smallNewses.length - this.SMALL_NEWSES_MAX_ITEMS, smallNewses.length));
 	}
 
 	paginate(event) {
-		this.db.getNewses().subscribe(newses => this.newsList = this.reversePipe.transform(newses).slice(event.page * this.PAGINATION_MAX_ITEMS, (event.page + 1) * this.PAGINATION_MAX_ITEMS));
+		this.db.getNewses(this.localeId).subscribe(newses => this.newsList = this.reversePipe.transform(newses).slice(event.page * this.PAGINATION_MAX_ITEMS, (event.page + 1) * this.PAGINATION_MAX_ITEMS));
 	}
 
 	getPageLinkSize(): number {
