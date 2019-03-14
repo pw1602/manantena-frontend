@@ -21,6 +21,7 @@ const express = require('express');
 const path = require('path');
 const http = require('http');
 const app = express();
+app.disable('x-powered-by');
 
 // get all locales
 const allLocales = [
