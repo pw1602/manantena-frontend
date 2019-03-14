@@ -2,6 +2,42 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="rightPanelServerInformationsTitle" datatype="html">
+        <source>Server informations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/right-panel/right-panel.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Server informations title</note>
+        <note priority="1" from="meaning">Righ Panel</note>
+      </trans-unit>
+      <trans-unit id="rightPanelServerInformationsOnline" datatype="html">
+        <source>Online: 0</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/right-panel/right-panel.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Server informations online</note>
+        <note priority="1" from="meaning">Righ Panel</note>
+      </trans-unit>
+      <trans-unit id="rightPanelServerInformationsClient" datatype="html">
+        <source>Client: 10.99</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/right-panel/right-panel.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Server informations client</note>
+        <note priority="1" from="meaning">Righ Panel</note>
+      </trans-unit>
+      <trans-unit id="rightPanelRaidsTitle" datatype="html">
+        <source>Raids</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/right-panel/right-panel.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Raids title</note>
+        <note priority="1" from="meaning">Righ Panel</note>
+      </trans-unit>
       <trans-unit id="navNews" datatype="html">
         <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> News <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>(current)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
@@ -188,6 +224,287 @@
           <context context-type="sourcefile">app/components/account/account-panel/account-panel.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
+        <note priority="1" from="description">Account panel title</note>
+        <note priority="1" from="meaning">Account - Right main site panel</note>
+      </trans-unit>
+      <trans-unit id="accountPanelLoginPlaceholder" datatype="html">
+        <source>Type your login...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-panel/account-panel.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Account panel login placeholder</note>
+        <note priority="1" from="meaning">Account - Right main site panel</note>
+      </trans-unit>
+      <trans-unit id="accountPanelInvalidLoginMessage" datatype="html">
+        <source>Login <x id="INTERPOLATION" equiv-text="{{formService.getHTMLError(f.login)}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-panel/account-panel.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Account panel invalid login message</note>
+        <note priority="1" from="meaning">Account - Right main site panel</note>
+      </trans-unit>
+      <trans-unit id="accountPanelPasswordPlaceholder" datatype="html">
+        <source>Type your password...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-panel/account-panel.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Account panel password placeholder</note>
+        <note priority="1" from="meaning">Account - Right main site panel</note>
+      </trans-unit>
+      <trans-unit id="accountPanelInvalidPasswordMessage" datatype="html">
+        <source>Password <x id="INTERPOLATION" equiv-text="{{formService.getHTMLError(f.password)}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-panel/account-panel.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">Account panel invalid password message</note>
+        <note priority="1" from="meaning">Account - Right main site panel</note>
+      </trans-unit>
+      <trans-unit id="accountPanelLoginSubmitButton" datatype="html">
+        <source>Submit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-panel/account-panel.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">Account panel login submit button</note>
+        <note priority="1" from="meaning">Account - Right main site panel</note>
+      </trans-unit>
+      <trans-unit id="accountPanelRegisterLink" datatype="html">
+        <source>Don&apos;t have an account? Sign up!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-panel/account-panel.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Account panel register account link</note>
+        <note priority="1" from="meaning">Account - Right main site panel</note>
+      </trans-unit>
+      <trans-unit id="accountPanelRecoveryLink" datatype="html">
+        <source>Forgot password or login? Recover it!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-panel/account-panel.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <note priority="1" from="description">Account panel recovery account link</note>
+        <note priority="1" from="meaning">Account - Right main site panel</note>
+      </trans-unit>
+      <trans-unit id="accountPanelAccountDetailsTitle" datatype="html">
+        <source>Account Details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-panel/account-panel.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Account panel account details title after login</note>
+        <note priority="1" from="meaning">Account - Right main site panel</note>
+      </trans-unit>
+      <trans-unit id="accountPanelCreateCharacterLink" datatype="html">
+        <source>Create Character</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-panel/account-panel.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <note priority="1" from="description">Account panel create character link</note>
+        <note priority="1" from="meaning">Account - Right main site panel</note>
+      </trans-unit>
+      <trans-unit id="accountPanelRefferalsLink" datatype="html">
+        <source>Refferals</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-panel/account-panel.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">Account panel refferals link</note>
+        <note priority="1" from="meaning">Account - Right main site panel</note>
+      </trans-unit>
+      <trans-unit id="accountPanelLogoutLink" datatype="html">
+        <source>Logout</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-panel/account-panel.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <note priority="1" from="description">Account panel logout link</note>
+        <note priority="1" from="meaning">Account - Right main site panel</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsTitle" datatype="html">
+        <source>Account Informations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Account details title</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsTableTitle" datatype="html">
+        <source>Management</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Account details account details table</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsEmailAddress" datatype="html">
+        <source>E-mail Address:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Account details email address</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsEmailAddressChangeButton" datatype="html">
+        <source>Change e-mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Account details e-mail change button</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsPassword" datatype="html">
+        <source>Password:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Account details password</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsPasswordChangeButton" datatype="html">
+        <source>Change password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Account details password change button</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsRecoveryCode" datatype="html">
+        <source>Recovery Code:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Account details recovery code</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsRecoveryCodeGenerateButton" datatype="html">
+        <source>Generate recovery key</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Account details recovery code generate button</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsCreationDate" datatype="html">
+        <source>Creation Date:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Account details creation date</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsTibiaCoinsAmount" datatype="html">
+        <source>Tibia Coins:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Account details tibia coins amount</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsCharacterListTitle" datatype="html">
+        <source>Character List</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <note priority="1" from="description">Account details character list title</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsCharacterListName" datatype="html">
+        <source>Character Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Account details character list - name</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsCharacterListLevel" datatype="html">
+        <source>Level</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Account details character list - level</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountDetailsCharacterListCreationDate" datatype="html">
+        <source>Creation Date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-details/account-details.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <note priority="1" from="description">Account details character list - creation date</note>
+        <note priority="1" from="meaning">Account - Details</note>
+      </trans-unit>
+      <trans-unit id="accountCreateCharacterTitle" datatype="html">
+        <source>Create Character</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-create-character/account-create-character.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Create character title</note>
+        <note priority="1" from="meaning">Account - Create Character</note>
+      </trans-unit>
+      <trans-unit id="accountCreateCharacterNameLabel" datatype="html">
+        <source>Character Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-create-character/account-create-character.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Create character name label</note>
+        <note priority="1" from="meaning">Account - Create Character</note>
+      </trans-unit>
+      <trans-unit id="accountCreateCharacterNameInputPlaceholder" datatype="html">
+        <source>Type character name...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-create-character/account-create-character.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Create character name input placeholder</note>
+        <note priority="1" from="meaning">Account - Create Character</note>
+      </trans-unit>
+      <trans-unit id="accountCreateCharacterVocationLegend" datatype="html">
+        <source>Vocation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-create-character/account-create-character.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Create character vocation legend</note>
+        <note priority="1" from="meaning">Account - Create Character</note>
+      </trans-unit>
+      <trans-unit id="accountCreateCharacterModalCancelButton" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-create-character/account-create-character.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description">Create character modal window cancel button</note>
+        <note priority="1" from="meaning">Account - Create Character</note>
+      </trans-unit>
+      <trans-unit id="accountCreateCharacterModalCreateButton" datatype="html">
+        <source>Create</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/account/account-create-character/account-create-character.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">Create character modal window create button</note>
+        <note priority="1" from="meaning">Account - Create Character</note>
       </trans-unit>
     </body>
   </file>

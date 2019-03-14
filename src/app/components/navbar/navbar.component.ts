@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, LOCALE_ID } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -25,7 +25,8 @@ export class NavbarComponent implements OnInit {
 	constructor(
 		public formBuilder: FormBuilder,
 		public router: Router,
-		public formService: FormControlService
+		public formService: FormControlService,
+		@Inject(LOCALE_ID) protected localeId: string
 	) {
 		this.languages = [
 			{ name: "English", flag: "english", code: 'en' },
@@ -50,7 +51,11 @@ export class NavbarComponent implements OnInit {
 	}
 
 	onLanguageChange(event) {
-		//this.router.navigate([event.value.code]);
-		console.log(this.router.url);
+		if (event.value.code != this.localeId) {
+			this.localeId = event.value.code;
+			//this.router.navigateByUrl('/' + event.value.code + '/' + this.router.url);
+			const url = "/" + this.localeId + this.router.url;
+			location.assign(url);
+		}
 	}
 }
