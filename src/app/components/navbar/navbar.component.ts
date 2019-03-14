@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -6,7 +6,8 @@ import { FormControlService } from '../../services/form-control.service';
 
 interface Language {
 	name: string,
-	flag: string
+	flag: string,
+	code: string
 }
 
 @Component({
@@ -27,8 +28,8 @@ export class NavbarComponent implements OnInit {
 		public formService: FormControlService
 	) {
 		this.languages = [
-			{ name: "English", flag: "english" },
-			{ name: "Polish", flag: "polish" }
+			{ name: "English", flag: "english", code: 'en' },
+			{ name: "Polish", flag: "polish", code: 'pl' }
 		];
 	}
 
@@ -46,5 +47,10 @@ export class NavbarComponent implements OnInit {
 		}
 		
 		this.router.navigate(['/player/' + this.searchForm.value.name]);
+	}
+
+	onLanguageChange(event) {
+		//this.router.navigate([event.value.code]);
+		console.log(this.router.url);
 	}
 }

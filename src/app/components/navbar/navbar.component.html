@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand sticky-top">
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Pokaż nawigację">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Show navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<span class="navbar-brand mb-0 h1">
-		<p-selectButton [options]="languages" [(ngModel)]="selectedLanguage" optionLabel="name">
+		<p-selectButton [options]="languages" [(ngModel)]="selectedLanguage" (onChange)="onLanguageChange($event)" optionLabel="name">
 			<ng-template let-item>
 				<div style="padding: .5em 1em">
-					<img style="vertical-align: middle; margin-right: .5em" src="../../../assets/images/{{item.value.flag}}.png" height="20px"/>
+					<img style="vertical-align: middle; margin-right: .5em" src="./assets/images/{{item.value.flag}}.png" height="20px"/>
 					<span>{{item.name}}</span>
 				</div>
 			</ng-template>
@@ -15,37 +15,37 @@
 	<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
 		<ul class="navbar-nav">
 			<li class="nav-item active">
-				<a class="nav-link" routerLink="/"><i class="fas fa-newspaper"></i> News <span class="sr-only">(current)</span></a>
+				<a class="nav-link" routerLink="/" i18n="Navigation|Go to newses@@navNews"><i class="fas fa-newspaper"></i> News <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" routerLink="/forum"><i class="fas fa-pencil-ruler"></i> Forum</a>
+				<a class="nav-link" routerLink="/forum" i18n="Navigation|Go to forum@@navForum"><i class="fas fa-pencil-ruler"></i> Forum</a>
 			</li>
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i> Community</a>
+				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" i18n="Navigation|Go to community dropdown@@navCommunityDropdown"><i class="fas fa-users"></i> Community</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" routerLink="/community/online" routerLinkActive="active">Who is online?</a>
-					<a class="dropdown-item" routerLink="/community/guilds">Guilds</a>
-					<a class="dropdown-item" routerLink="/community/gallery">Gallery</a>
-					<a class="dropdown-item" routerLink="/community/support">Support</a>
+					<a class="dropdown-item" routerLink="/community/online" routerLinkActive="active" i18n="Navigation|Go to online players@@navOnlinePlayers">Who is online?</a>
+					<a class="dropdown-item" routerLink="/community/guilds" i18n="Navigation|Go to guilds@@navGuilds">Guilds</a>
+					<a class="dropdown-item" routerLink="/community/gallery" i18n="Navigation|Go to gallery@@navGallery">Gallery</a>
+					<a class="dropdown-item" routerLink="/community/support" i18n="Navigation|Go to support@@navSupport">Support</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-book"></i> Library</a>
+				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" i18n="Navigation|Go to library dropdown@@navLibraryDropdown"><i class="fas fa-book"></i> Library</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" routerLink="/library/rules">Rules</a>
-					<a class="dropdown-item" routerLink="/library/faq">FAQ</a>
-					<a class="dropdown-item" routerLink="/library/serverinfo">Server Informations</a>
-					<a class="dropdown-item" routerLink="/library/download">Download</a>
-					<a class="dropdown-item" routerLink="/library/achievements">Achievements</a>
+					<a class="dropdown-item" routerLink="/library/rules" i18n="Navigation|Go to rules@@navRules">Rules</a>
+					<a class="dropdown-item" routerLink="/library/faq" i18n="Navigation|Go to faq@@navFaq">FAQ</a>
+					<a class="dropdown-item" routerLink="/library/serverinfo" i18n="Navigation|Go to server informations@@navServerInformations">Server Informations</a>
+					<a class="dropdown-item" routerLink="/library/download" i18n="Navigation|Go to download@@navDownload">Download</a>
+					<a class="dropdown-item" routerLink="/library/achievements" i18n="Navigation|Go to achievements@@navAchievements">Achievements</a>
 				</div>
 			</li>
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-address-book"></i> Rankings</a>
+				<a class="nav-link dropdown-toggle" href="#" id="navbar-community-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" i18n="Navigation|Go to rankings dropdown@@navRankingsDropdown"><i class="fas fa-address-book"></i> Rankings</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-					<a class="dropdown-item" routerLink="/ranking/top">Top</a>
-					<a class="dropdown-item" routerLink="/ranking/quests">Quests</a>
-					<a class="dropdown-item" routerLink="/ranking/achievements">Achievements</a>
-					<a class="dropdown-item" routerLink="/ranking/guilds">Guilds</a>
+					<a class="dropdown-item" routerLink="/ranking/top" i18n="Navigation|Go to top ranking@@navRankingTop">Top</a>
+					<a class="dropdown-item" routerLink="/ranking/quests" i18n="Navigation|Go to quests ranking@@navRankingQuests">Quests</a>
+					<a class="dropdown-item" routerLink="/ranking/achievements" i18n="Navigation|Go to achievements ranking@@navRankingAchievements">Achievements</a>
+					<a class="dropdown-item" routerLink="/ranking/guilds" i18n="Navigation|Go to guilds ranking@@navRankingGuilds">Guilds</a>
 				</div>
 			</li>
 		</ul>
@@ -55,8 +55,8 @@
 			<div class="input-group-prepend">
 				<div class="input-group-text"><i class="fas fa-search"></i></div>
 			</div>
-			<input class="form-control mr-sm-2" type="search" formControlName="name" placeholder="Character name..." aria-label="Serach">
+			<input class="form-control mr-sm-2" type="search" formControlName="name" placeholder="Character name..." aria-label="Serach" i18n-placeholder="Navigation|Search input placeholder@@navSearchInputPlaceholder">
 		</div>
-		<button class="btn my-2 my-sm-0" type="submit">Search</button>
+		<button class="btn my-2 my-sm-0" type="submit" i18n="Navigation|Search button@@navSearchButton">Search</button>
 	</form>
 </nav>

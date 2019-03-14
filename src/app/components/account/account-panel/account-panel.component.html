@@ -1,5 +1,5 @@
 <div class="info-account p-3 mb-3">
-	<h5 class="center rounded border-title p-2">Account Panel</h5>
+	<h5 class="center rounded border-title p-2" i18n="@@accountPanelTitle">Account Panel</h5>
 	<div *ngIf="!loginService.isLoggedIn()">
 		<small>Test Accounts: user/user</small>
 		<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
