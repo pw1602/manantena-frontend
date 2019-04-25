@@ -2,6 +2,7 @@ import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { ReversePipe } from 'src/app/pipes/reverse.pipe';
 
 import { DatabaseService } from '../../services/database.service';
+import { SiteOptionsService } from 'src/app/services/site-options.service';
 
 @Component({
 	selector: 'app-news',
@@ -18,6 +19,7 @@ export class NewsComponent implements OnInit {
 
 	constructor(
 		public db: DatabaseService,
+		public siteOptions: SiteOptionsService,
 		@Inject(LOCALE_ID) private localeId: string
 	) { }
 

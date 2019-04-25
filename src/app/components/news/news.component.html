@@ -1,11 +1,11 @@
 <div class="news">
-	<div class="news-small mb-4">
+	<div class="news-small mb-4" *ngIf="siteOptions.SmallNewses()">
 		<h5 class="list-group-item" i18n="News|Small newses title@@newsSmallNewsesTitle">What's new?</h5>
 		<ul class="list-group">
 			<li class="list-group-item" *ngFor="let news of smallNewsList | reverse; let i = index">
 				<span class="badge">{{news.date}}</span> {{news.content}} <span class="badge badge-success" *ngIf="i == 0">New</span>
 			</li>
-	</ul>
+		</ul>
 	</div>
 
 	<div class="news-big">

@@ -3,6 +3,7 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { FormControlService } from '../../services/form-control.service';
+import { SiteOptionsService } from 'src/app/services/site-options.service';
 
 interface Language {
 	name: string,
@@ -26,6 +27,7 @@ export class NavbarComponent implements OnInit {
 		public formBuilder: FormBuilder,
 		public router: Router,
 		public formService: FormControlService,
+		public siteOptions: SiteOptionsService,
 		@Inject(LOCALE_ID) protected localeId: string
 	) {
 		this.languages = [

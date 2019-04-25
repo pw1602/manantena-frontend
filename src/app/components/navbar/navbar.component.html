@@ -2,7 +2,7 @@
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Show navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
-	<span class="navbar-brand mb-0 h1">
+	<span class="navbar-brand mb-0 h1" *ngIf="siteOptions.LanguageSelect()">
 		<p-selectButton [options]="languages" [(ngModel)]="selectedLanguage" (onChange)="onLanguageChange($event)" optionLabel="name">
 			<ng-template let-item>
 				<div style="padding: .5em 1em">

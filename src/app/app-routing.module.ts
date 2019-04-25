@@ -24,7 +24,7 @@ import { RecoverComponent } from './components/recover/recover.component';
 import { ForumComponent } from './components/forum/forum.component';
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/', pathMatch: 'full' },
+	//{ path: '', redirectTo: '/', pathMatch: 'full' },
 	{ path: '', component: NewsComponent },
 	{ path: 'forum', component: ForumComponent },
 	{ path: 'register', component: RegisterComponent },
@@ -59,7 +59,8 @@ const routes: Routes = [
 		{ path: '', redirectTo: 'details', pathMatch: 'full' },
 		{ path: 'details', component: AccountDetailsComponent },
 		{ path: 'refferals', component: AccountRefferalsComponent }
-	]}
+	]},
+	{ path: '**', redirectTo: '/' }
 ];
 
 @NgModule({

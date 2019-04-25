@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { RightpanelComponent } from './components/right-panel/right-panel.component';
 import { NewsComponent } from './components/news/news.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { CommunityOnlineComponent } from './components/community/community-online/community-online.component';
 import { PlayerInfoComponent } from './components/player-info/player-info.component';
 import { AccountPanelComponent } from './components/account/account-panel/account-panel.component';
@@ -37,6 +36,7 @@ import { RecoverComponent } from './components/recover/recover.component';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { TimePipe } from './pipes/time.pipe';
 import { ForumComponent } from './components/forum/forum.component';
+import { HintsComponent } from './components/hints/hints.component';
 
 @NgModule({
 	declarations: [
@@ -44,7 +44,6 @@ import { ForumComponent } from './components/forum/forum.component';
 		RightpanelComponent,
 		NewsComponent,
 		NavbarComponent,
-		CarouselComponent,
 		CommunityOnlineComponent,
 		PlayerInfoComponent,
 		ReversePipe,
@@ -68,6 +67,7 @@ import { ForumComponent } from './components/forum/forum.component';
 		RecoverComponent,
 		TimePipe,
 		ForumComponent,
+		HintsComponent,
 	],
 	imports: [
 		BrowserModule,
