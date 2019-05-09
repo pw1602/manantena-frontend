@@ -4,9 +4,12 @@ import { HttpClient } from '@angular/common/http';
 
 import { News, SmallNews } from '../classes/news';
 import { Guild } from '../classes/guild';
+import { Account } from '../classes/account';
 
 import { NEWS_LIST_EN, NEWS_LIST_PL, SMALL_NEWS_LIST_EN, SMALL_NEWS_LIST_PL } from '../mocks/news-mock';
 import { GUILD } from '../mocks/guilds-mock';
+import { ACCOUNTS, PERMISSIONS } from '../mocks/accounts-mock';
+import { Permissions } from '../classes/permissions';
 
 @Injectable({
 	providedIn: 'root'
@@ -31,5 +34,13 @@ export class DatabaseService {
 
 	getGuilds(): Observable<Guild[]> {
 		return of(GUILD);
+	}
+
+	getAccount(email: string): Observable<Account> {
+		return of(ACCOUNTS.find(account => account.email === email));
+	}
+
+	getPermissions(accountId: number): Observable<Permissions> {
+		return of(PERMISSIONS.find(perm => perm.account_id === accountId));
 	}
 }

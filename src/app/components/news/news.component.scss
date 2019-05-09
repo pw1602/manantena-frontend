@@ -21,12 +21,17 @@
 .news-big-news {
     h3 {
         text-align: left;
-    }
+	}
 
     .blockquote-footer {
-        text-align: left;
         font-size: 12px;
-    }
+	}
+	
+	p {
+		text-align: justify;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
 :host ::ng-deep {

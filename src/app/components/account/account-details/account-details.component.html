@@ -8,7 +8,7 @@
 	<tbody>
 		<tr>
 			<td i18n="Account - Details|Account details email address@@accountDetailsEmailAddress">E-mail Address:</td>
-			<td>email@example.com <button class="btn btn-sm float-right" i18n="Account - Details|Account details e-mail change button@@accountDetailsEmailAddressChangeButton">Change e-mail</button></td>
+			<td>{{account.email}} <button class="btn btn-sm float-right" i18n="Account - Details|Account details e-mail change button@@accountDetailsEmailAddressChangeButton">Change e-mail</button></td>
 		</tr>
 		<tr>
 			<td i18n="Account - Details|Account details password@@accountDetailsPassword">Password:</td>
@@ -16,15 +16,15 @@
 		</tr>
 		<tr>
 			<td i18n="Account - Details|Account details recovery code@@accountDetailsRecoveryCode">Recovery Code:</td>
-			<td>None <button class="btn btn-sm float-right" i18n="Account - Details|Account details recovery code generate button@@accountDetailsRecoveryCodeGenerateButton">Generate recovery key</button></td>
+			<td>{{account.revoceryCode}} <button class="btn btn-sm float-right" i18n="Account - Details|Account details recovery code generate button@@accountDetailsRecoveryCodeGenerateButton">Generate recovery key</button></td>
 		</tr>
 		<tr>
 			<td i18n="Account - Details|Account details creation date@@accountDetailsCreationDate">Creation Date:</td>
-			<td>00/00/0000</td>
+			<td>{{account.creationDate | date: 'short'}}</td>
 		</tr>
 		<tr>
 			<td i18n="Account - Details|Account details tibia coins amount@@accountDetailsTibiaCoinsAmount">Tibia Coins:</td>
-			<td>0</td>
+			<td>{{account.tibiaCoins}}</td>
 		</tr>
 	</tbody>
 </table>
@@ -41,10 +41,10 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td>Example Player</td>
-			<td>1</td>
-			<td>00/00/000</td>
+		<tr *ngFor="let character of account.characters">
+			<td>{{character.name}}</td>
+			<td>{{character.level}}</td>
+			<!-- <td>{{character.creationDate | date: 'short'}}</td> --> 
 		</tr>
 	</tbody>
 </table>

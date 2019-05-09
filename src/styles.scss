@@ -5,10 +5,9 @@
 	#051200, #0c1f05, #162c0d, #223819
 */
 
-@import 'app/global';
+@import 'app/global.scss';
 
 body {
-	text-align: center;
 	background-color: $bg-darkest-green;
 	color: white;
 }
@@ -27,11 +26,13 @@ body {
 	border-top: 1px solid $green-light !important;
 	border-bottom: 1px solid $green-light !important;
 	background-color: $bg-dark-green;
+	text-align: center;
 }
 
 #footer {
 	width: 60%;
 	margin: auto;
+	text-align: center;
 }
 
 form {
@@ -83,6 +84,7 @@ button {
 }
 
 table {
+	text-align: center;
 	width: 100%;
 	padding: 3px;
 	border: 1px solid $green-light;
