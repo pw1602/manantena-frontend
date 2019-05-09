@@ -29,7 +29,6 @@ export class HintsComponent implements OnInit {
 			default:
 				this.hint = englishHints[random];
 		}
-		console.log(random);
 	}
 
 	private getRandomInt(min, max) {

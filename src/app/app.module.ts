@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginatorModule } from 'primeng/paginator';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -77,9 +79,10 @@ import { HintsComponent } from './components/hints/hints.component';
 		FormsModule,
 		BrowserAnimationsModule,
 		PaginatorModule,
-		SelectButtonModule
+		SelectButtonModule,
+		ToastModule
 	],
-	providers: [],
+	providers: [MessageService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -17,7 +17,7 @@ export interface Player {
 		manamax: number,
 		town_id: number,
 		sex: number,
-		lastlogin: string,
+		lastlogin: number,
 		stamina: number,
 		skill_fist: number,
 		skill_club: number,
@@ -35,4 +35,11 @@ export interface Player {
         //guild: string = "Example Guild",
         //created: string = "00/00/0000",
         //status: string = "Premium Account"
+}
+
+export interface PlayerOnline {
+	id: number,
+	name: string,
+	level: number,
+	lastLogin: number
 }

@@ -3,11 +3,11 @@ export interface News {
     title: string;
     content: string;
     author: string;
-    date: string;
+    date: number;
 }
 
 export interface SmallNews {
     id: number;
-    date: string;
+    date: number;
     content: string;
 }

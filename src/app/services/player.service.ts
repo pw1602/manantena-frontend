@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-import { Player } from '../classes/player';
-import { PLAYERS } from '../mocks/player-mock';
+import { Player, PlayerOnline } from '../classes/player';
+import { PLAYERS, PLAYERS_ONLINE } from '../mocks/player-mock';
 
 @Injectable({
 	providedIn: 'root'
@@ -31,5 +31,9 @@ export class PlayerService {
 
 	findPlayerByName(name): Observable<Player> {
 		return of(PLAYERS.find(player => player.name.toLocaleLowerCase() == name.toLocaleLowerCase()));
+	}
+
+	getOnlinePlayers(): Observable<PlayerOnline[]> {
+		return of(PLAYERS_ONLINE);
 	}
 }

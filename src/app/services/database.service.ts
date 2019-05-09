@@ -3,8 +3,10 @@ import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 import { News, SmallNews } from '../classes/news';
+import { Guild } from '../classes/guild';
 
 import { NEWS_LIST_EN, NEWS_LIST_PL, SMALL_NEWS_LIST_EN, SMALL_NEWS_LIST_PL } from '../mocks/news-mock';
+import { GUILD } from '../mocks/guilds-mock';
 
 @Injectable({
 	providedIn: 'root'
@@ -25,5 +27,9 @@ export class DatabaseService {
 
 	getNewsesLength(): number {
 		return NEWS_LIST_EN.length;
+	}
+
+	getGuilds(): Observable<Guild[]> {
+		return of(GUILD);
 	}
 }

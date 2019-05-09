@@ -50,7 +50,7 @@
 					</div>
 				</td>
 			</tr>
-			<tr>
+			<tr *ngIf="player.house !== ''">
 				<td i18n="Player Info|House header in table@@playerInfoHouseHeader">House</td>
 				<td colspan="2">{{player.house}}</td>
 			</tr>
@@ -60,7 +60,7 @@
 			</tr>
 			<tr>
 				<td i18n="Player Info|Last login header in table@@playerInfoLastLoginHeader">Last Login</td>
-				<td colspan="2">{{player.lastlogin | time}}</td>
+				<td colspan="2">{{player.lastlogin | date: 'short'}}</td>
 			</tr>
 		</tbody>
 	</table>
@@ -104,7 +104,7 @@
 		</thead>
 		<tbody>
 			<tr *ngFor="let death of player.deaths; let i = index">
-				<td *ngIf="i < 5">{{death.time | time}}</td>
+				<td *ngIf="i < 5">{{death.time | date: 'short'}}</td>
 				<td *ngIf="i < 5">{{death.level}}</td>
 				<td *ngIf="i < 5">{{death.killed_by}}</td>
 			</tr>

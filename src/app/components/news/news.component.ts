@@ -36,7 +36,7 @@ export class NewsComponent implements OnInit {
 		return Math.ceil(this.db.getNewsesLength() / this.PAGINATION_MAX_ITEMS);
 	}
 
-	isNew(date: string): boolean {
-		return new Date(date).getMilliseconds() < Date.now();
+	isNew(date: number): boolean {
+		return date + (3 * 60 * 60 * 1000) > Date.now();
 	}
 }
