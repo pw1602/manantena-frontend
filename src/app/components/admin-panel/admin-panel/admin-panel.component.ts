@@ -10,8 +10,8 @@ import { PermissionService } from '@/services/permission.service';
 })
 export class AdminPanelComponent implements OnInit {
 	constructor(
-		private loginService: LoginService,
-		private permissionService: PermissionService
+		public loginService: LoginService,
+		public permissionService: PermissionService
 	) { }
 
 	ngOnInit() {

@@ -4,45 +4,33 @@
 		<div class="form-group">
 			<label for="login" i18n="Register|Login label@@registerLoginLabel">Login</label>
 			<input type="text" class="form-control" id="login" formControlName="login" required>
-			<div *ngIf="formService.check(f.login)">
-				<small class="invalid-text">Login {{formService.getHTMLError(f.login)}}</small>
-			</div> 
+			<app-error-message [control]="f.login"></app-error-message>
 		</div>
 		<div class="form-group">
 			<label for="email" i18n="Register|Email label@@registerEmailLabel">Email address</label>
 			<input type="email" class="form-control" id="email" formControlName="email" required>
-			<div *ngIf="formService.check(f.email)">
-				<small class="invalid-text">Email {{formService.getHTMLError(f.email)}}</small>
-			</div>
+			<app-error-message [control]="f.email"></app-error-message>
 		</div>
 		<div class="form-group">
 			<label for="username" i18n="Register|Username label@@registerUsernameLabel">Username</label>
 			<input type="text" class="form-control" id="username" formControlName="username" required>
-			<div *ngIf="formService.check(f.username)">
-				<small class="invalid-text">Username {{formService.getHTMLError(f.username)}}</small>
-			</div>
+			<app-error-message [control]="f.username"></app-error-message>
 			<small class="form-text text-muted">This will be also as your forum nickname.</small>
 		</div>
 		<div class="form-group">
 			<label for="password" i18n="Register|Password label@@registerPasswordLabel">Password</label>
 			<input type="password" class="form-control" id="password" formControlName="password" required>
-			<div *ngIf="formService.check(f.password)">
-				<small class="invalid-text">Password {{formService.getHTMLError(f.password)}}</small>
-			</div>
+			<app-error-message [control]="f.password"></app-error-message>
 		</div>
 		<div class="form-group">
 			<label for="retype-password" i18n="Register|Re-type password label@@registerReTypePasswordLabel">Retype Password</label>
 			<input type="password" class="form-control" id="retype-password" formControlName="retypePassword" required>
-			<div *ngIf="formService.check(f.retypePassword)">
-				<small class="invalid-text">Retype password {{formService.getHTMLError(f.retypePassword)}}</small>
-			</div>
+			<app-error-message [control]="f.retypePassword"></app-error-message>
 		</div>
 		<div class="form-group form-check">
 			<input type="checkbox" class="form-check-input" id="rules" formControlName="rules" required>
 			<label class="form-check-label" for="rules" i18n="Register|Accepting rules label@@registerAcceptRulesLabel">I accept Server Rules</label>
-			<div *ngIf="formService.check(f.rules)">
-				<small class="invalid-text">Accepting rules {{formService.getHTMLError(f.rules)}}</small>
-			</div>
+			<app-error-message [control]="f.rules"></app-error-message>
 		</div>
 		<button type="submit" class="btn" i18n="Register|Register button@@registerRegisterButton">Register</button>
 	</form>
