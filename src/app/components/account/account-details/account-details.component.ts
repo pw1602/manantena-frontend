@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { shareReplay } from 'rxjs/operators';
 
-import { DatabaseService } from 'src/app/services/database.service';
-import { Account } from '../../../classes/account';
+import { DatabaseService } from '@/services/database.service';
+
+import { Account } from '@/classes/account';
+import { Player } from '@/classes/player';
 
 @Component({
 	selector: 'app-account-details',
@@ -9,14 +13,13 @@ import { Account } from '../../../classes/account';
 	styleUrls: ['./account-details.component.scss']
 })
 export class AccountDetailsComponent implements OnInit {
-	creationDate = Date.now();
-	account: Account;
-
 	constructor(
 		public db: DatabaseService
 	) { }
 
 	ngOnInit() {
-		this.db.getAccount(localStorage.getItem('token')).subscribe(account => this.account = account);
 	}
+
+	account$: Observable<Account> = this.db.getAccount(localStorage.getItem('token')).pipe(shareReplay());
+	characters$: Observable<Player[]> = this.db.getAccountCharacters(localStorage.getItem('token')).pipe(shareReplay());
 }

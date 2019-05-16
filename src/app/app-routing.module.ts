@@ -25,7 +25,6 @@ import { ForumComponent } from './components/forum/forum.component';
 
 const routes: Routes = [
 	//{ path: '', redirectTo: '/', pathMatch: 'full' },
-	{ path: '', component: NewsComponent },
 	{ path: 'forum', component: ForumComponent },
 	{ path: 'register', component: RegisterComponent },
 	{ path: 'recover', component: RecoverComponent },
@@ -60,6 +59,7 @@ const routes: Routes = [
 		{ path: 'details', component: AccountDetailsComponent },
 		{ path: 'refferals', component: AccountRefferalsComponent }
 	]},
+	{ path: '', component: NewsComponent },
 	{ path: '**', redirectTo: '/' }
 ];
 

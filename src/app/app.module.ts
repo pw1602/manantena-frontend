@@ -34,11 +34,16 @@ import { RankingAchievementsComponent } from './components/ranking/ranking-achie
 import { RankingGuildsComponent } from './components/ranking/ranking-guilds/ranking-guilds.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RecoverComponent } from './components/recover/recover.component';
+import { ForumComponent } from './components/forum/forum.component';
+import { HintsComponent } from './components/hints/hints.component';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel/admin-panel.component';
+import { AdminReportsComponent } from './components/admin-panel/admin-reports/admin-reports.component';
+import { AdminStatisticsComponent } from './components/admin-panel/admin-statistics/admin-statistics.component';
+import { AdminOverviewComponent } from './components/admin-panel/admin-overview/admin-overview.component';
+import { ErrorMessageComponent } from './components/error-message/error-message.component';
 
 import { ReversePipe } from './pipes/reverse.pipe';
 import { TimePipe } from './pipes/time.pipe';
-import { ForumComponent } from './components/forum/forum.component';
-import { HintsComponent } from './components/hints/hints.component';
 
 @NgModule({
 	declarations: [
@@ -70,6 +75,11 @@ import { HintsComponent } from './components/hints/hints.component';
 		TimePipe,
 		ForumComponent,
 		HintsComponent,
+		AdminPanelComponent,
+		AdminReportsComponent,
+		AdminStatisticsComponent,
+		AdminOverviewComponent,
+		ErrorMessageComponent
 	],
 	imports: [
 		BrowserModule,

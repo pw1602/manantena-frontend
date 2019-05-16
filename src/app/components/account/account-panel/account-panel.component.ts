@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 
-import { LoginService } from '../../../services/login.service';
-import { FormControlService } from '../../../services/form-control.service';
-import { DatabaseService } from 'src/app/services/database.service';
+import { LoginService } from '@/services/login.service';
+import { DatabaseService } from '@/services/database.service';
 
 @Component({
 	selector: 'app-account-panel',
 	templateUrl: './account-panel.component.html',
 	styleUrls: ['./account-panel.component.scss'],
-	providers: [LoginService, FormControlService]
+	providers: [LoginService]
 })
 export class AccountPanelComponent implements OnInit {
 	loginForm: FormGroup;
@@ -18,7 +17,6 @@ export class AccountPanelComponent implements OnInit {
 	constructor(
 		public formBuilder: FormBuilder,
 		public loginService: LoginService,
-		public formService: FormControlService,
 		private messageService: MessageService,
 		public db: DatabaseService
 	) { }
@@ -33,16 +31,12 @@ export class AccountPanelComponent implements OnInit {
 	get f() { return this.loginForm.controls }
 
 	onSubmit() {
-		if (this.formService.onSubmitCheck(this.loginForm)) {
+		if (this.loginForm.invalid) {
 			return;
 		}
 
 		const value = this.loginForm.value;
 		this.db.getAccount(value.login).subscribe(account => {
-			if (account === undefined) {
-				return this.messageService.add({ severity: 'error', summary: "Login System", detail: "Failed to login. Your email or password is incorrect." });
-			}
-
 			if (account.password === value.password) {
 				this.loginService.login(value.login, (new Date().getTime() + 3600000).toString());
 				this.loginForm.reset();
@@ -50,6 +44,8 @@ export class AccountPanelComponent implements OnInit {
 			} else {
 				return this.messageService.add({ severity: 'error', summary: "Login System", detail: "Failed to login. Your email or password is incorrect." });
 			}
+		}, error => {
+			return this.messageService.add({ severity: 'error', summary: "Login System", detail: "Failed to login. Check your email or password." });
 		});
 	}
 

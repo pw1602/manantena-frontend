@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
-import { FormControlService } from 'src/app/services/form-control.service';
-
 @Component({
 	selector: 'app-register',
 	templateUrl: './register.component.html',
@@ -11,7 +9,9 @@ import { FormControlService } from 'src/app/services/form-control.service';
 export class RegisterComponent implements OnInit {
 	registerForm: FormGroup;
 
-	constructor(private formBuilder: FormBuilder, public formService: FormControlService) {}
+	constructor(
+		private formBuilder: FormBuilder
+	) {}
 
 	ngOnInit() {
 		this.registerForm = this.formBuilder.group({
@@ -33,8 +33,8 @@ export class RegisterComponent implements OnInit {
 			this.registerForm.controls.retypePassword.setErrors({retyped: false});
 		}
 
-		if (this.formService.onSubmitCheck(this.registerForm)) {
+		if (this.registerForm.invalid) {
 			return;
-		};
+		}
 	}
 }

@@ -8,10 +8,10 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let player of playersOnline">
-			<td><div class="outfit" style="background-image: url(http://outfit-images.ots.me/animatedOutfits1090/animoutfit.php?id=128&addons=3&head=123&body=12&legs=23&feet=31&mount=0&direction=3)"></div>{{player.name}}</td>
+		<tr *ngFor="let player of playersOnline$ | async">
+			<td><div class="outfit" [ngStyle]="{'background-image': 'url(' + getOutfit(player) + ')'}"></div>{{player.name}}</td>
 			<td>{{player.level}}</td>
-			<td>{{player.lastLogin | date: 'short'}}</td>
+			<td>{{player.lastlogin | date: 'short'}}</td>
 		</tr>
 	</tbody>
 </table>

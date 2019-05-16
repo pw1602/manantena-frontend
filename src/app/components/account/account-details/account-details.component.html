@@ -5,7 +5,7 @@
 			<th colspan="2" i18n="Account - Details|Account details account details table@@accountDetailsTableTitle">Management</th>
 		</tr>
 	</thead>
-	<tbody>
+	<tbody *ngIf="(account$ | async) as account">
 		<tr>
 			<td i18n="Account - Details|Account details email address@@accountDetailsEmailAddress">E-mail Address:</td>
 			<td>{{account.email}} <button class="btn btn-sm float-right" i18n="Account - Details|Account details e-mail change button@@accountDetailsEmailAddressChangeButton">Change e-mail</button></td>
@@ -37,14 +37,14 @@
 		<tr>
 			<th scope="col" i18n="Account - Details|Account details character list - name@@accountDetailsCharacterListName">Character Name</th>
 			<th scope="col" i18n="Account - Details|Account details character list - level@@accountDetailsCharacterListLevel">Level</th>
-			<th scope="col" i18n="Account - Details|Account details character list - creation date@@accountDetailsCharacterListCreationDate">Creation Date</th>
+			<th scope="col" i18n="Account - Details|Account details character list - last login@@accountDetailsCharacterListLastLogin">Last Login</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let character of account.characters">
+		<tr *ngFor="let character of characters$ | async">
 			<td>{{character.name}}</td>
 			<td>{{character.level}}</td>
-			<!-- <td>{{character.creationDate | date: 'short'}}</td> --> 
+			<td>{{character.lastlogin | date: 'short'}}</td>
 		</tr>
 	</tbody>
 </table>

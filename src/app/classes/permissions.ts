@@ -1,4 +1,7 @@
 interface PermissionFlags {
+	//Global
+	viewAdminPanel: boolean;
+
 	// Newses
 	addNews: boolean;
 	removeNews: boolean;

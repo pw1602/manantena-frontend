@@ -2,14 +2,13 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-import { News, SmallNews } from '../classes/news';
-import { Guild } from '../classes/guild';
-import { Account } from '../classes/account';
+import { News, SmallNews } from '@/classes/news';
+import { Guild } from '@/classes/guild';
+import { Account } from '@/classes/account';
+import { Global } from '@/classes/global';
+import { Player } from '@/classes/player';
 
-import { NEWS_LIST_EN, NEWS_LIST_PL, SMALL_NEWS_LIST_EN, SMALL_NEWS_LIST_PL } from '../mocks/news-mock';
-import { GUILD } from '../mocks/guilds-mock';
-import { ACCOUNTS, PERMISSIONS } from '../mocks/accounts-mock';
-import { Permissions } from '../classes/permissions';
+import { Permissions } from '@/classes/permissions';
 
 @Injectable({
 	providedIn: 'root'
@@ -21,26 +20,26 @@ export class DatabaseService {
 	) { }
 
 	getNewses(lang: string = "en"): Observable<News[]> {
-		return lang === "pl" ? of(NEWS_LIST_PL) : of(NEWS_LIST_EN);
+		return this.http.get<News[]>(Global.API_ENDPOINT + '/news/' + lang);
 	}
 
 	getSmallNewses(lang: string = "en"): Observable<SmallNews[]> {
-		return lang === "pl" ? of(SMALL_NEWS_LIST_PL) : of(SMALL_NEWS_LIST_EN);
-	}
-
-	getNewsesLength(): number {
-		return NEWS_LIST_EN.length;
+		return this.http.get<SmallNews[]>(Global.API_ENDPOINT + '/small_news/' + lang);
 	}
 
 	getGuilds(): Observable<Guild[]> {
-		return of(GUILD);
+		return this.http.get<Guild[]>(Global.API_ENDPOINT + '/guild');
 	}
 
 	getAccount(email: string): Observable<Account> {
-		return of(ACCOUNTS.find(account => account.email === email));
+		return this.http.get<Account>(Global.API_ENDPOINT + '/account/' + email);
+	}
+
+	getAccountCharacters(value): Observable<Player[]> {
+		return this.http.get<Player[]>(Global.API_ENDPOINT + '/account/' + value + '/characters');
 	}
 
 	getPermissions(accountId: number): Observable<Permissions> {
-		return of(PERMISSIONS.find(perm => perm.account_id === accountId));
+		return this.http.get<Permissions>(Global.API_ENDPOINT + '/account/' + accountId + '/permissions');
 	}
 }

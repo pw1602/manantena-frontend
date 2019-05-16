@@ -2,20 +2,26 @@
 	<div class="news-small mb-4" *ngIf="siteOptions.SmallNewses()">
 		<h5 class="list-group-item" i18n="News|Small newses title@@newsSmallNewsesTitle">What's new?</h5>
 		<ul class="list-group">
-			<li class="list-group-item" *ngFor="let news of smallNewsList | reverse; let i = index">
-				<span class="badge">{{news.date | date}}</span> {{news.content}} <span class="badge badge-success" *ngIf="isNew(news.date)">New</span>
-			</li>
+			<div *ngIf="(smallNewses$ | async) as smallNewses">
+				<div *ngFor="let news of smallNewses | reverse; let i = index;">
+					<li class="list-group-item" *ngIf="i < SMALL_NEWSES_MAX_ITEMS">
+						<span class="badge">{{news.date | date}}</span> {{news.content}} <span class="badge badge-success" *ngIf="isNew(news.date)">New</span>
+					</li>
+				</div>
+			</div>
 		</ul>
 	</div>
 
 	<div class="news-big">
-		<div class="news-big-news" *ngFor="let news of newsList | reverse; let i = index">
-			<h3 class="rounded p-2 pl-4 border-title">#{{news.id}} {{news.title | titlecase}} <span class="badge badge-success" *ngIf="isNew(news.date)">New</span></h3>
-			<blockquote class="blockquote">
-				<p>{{news.content}}</p>
-				<footer class="blockquote-footer">{{news.author}} | {{news.date | date}}</footer>
-			</blockquote>
+		<div *ngIf="(newses$ | async) as newses">
+			<div class="news-big-news" *ngFor="let news of newses | reverse">
+				<h3 class="rounded p-2 pl-4 border-title">#{{news.id}} {{news.title | titlecase}} <span class="badge badge-success" *ngIf="isNew(news.date)">New</span></h3>
+				<blockquote class="blockquote">
+					<p>{{news.content}}</p>
+					<footer class="blockquote-footer">{{news.author}} | {{news.date | date}}</footer>
+				</blockquote>
+			</div>
+			<p-paginator [rows]="PAGINATION_MAX_ITEMS" [totalRecords]="newses.length" [pageLinkSize]="getPageLinkSize(newses.length)" [alwaysShow]="false"></p-paginator> <!-- (onPageChange)="paginate($event)" -->
 		</div>
-		<p-paginator [rows]="PAGINATION_MAX_ITEMS" [totalRecords]="db.getNewsesLength()" [pageLinkSize]="getPageLinkSize()" [alwaysShow]="false" (onPageChange)="paginate($event) "></p-paginator>
 	</div>
 </div>

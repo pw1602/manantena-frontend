@@ -1,39 +1,29 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-import { Player, PlayerOnline } from '../classes/player';
-import { PLAYERS, PLAYERS_ONLINE } from '../mocks/player-mock';
+import { Player } from '../classes/player';
+import { Global } from '@/classes/global';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class PlayerService {
-	private apiUrl = 'http://localhost:8080/api';
-
 	constructor(private http: HttpClient) { }
 
-	/*getPlayers(): Observable<Player[]> {
-		return of(PLAYERS);
+	getPlayers(): Observable<Player[]> {
+		return this.http.get<Player[]>(Global.API_ENDPOINT + '/player', { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }});
 	}
 
-	findPlayerById(id): Observable<Player> {
-		return of(PLAYERS.find(player => player.id === id));
-	}*/
-
-	/*findPlayerByName(name): Observable<Player> {
-		return this.http.get<Player>(this.apiUrl + '/player/' + name);
-	}*/
-
-	getPlayersCountInDatabase(): number {
-		return PLAYERS.length;
+	findPlayerById(id: number): Observable<Player> {
+		return this.http.get<Player>(Global.API_ENDPOINT + '/player/' + id);
 	}
 
-	findPlayerByName(name): Observable<Player> {
-		return of(PLAYERS.find(player => player.name.toLocaleLowerCase() == name.toLocaleLowerCase()));
+	findPlayerByName(name: string): Observable<Player> {
+		return this.http.get<Player>(Global.API_ENDPOINT + '/player/' + name);
 	}
 
-	getOnlinePlayers(): Observable<PlayerOnline[]> {
-		return of(PLAYERS_ONLINE);
+	getOnlinePlayers(): Observable<Player[]> {
+		return this.http.get<Player[]>(Global.API_ENDPOINT + '/player/online');
 	}
 }

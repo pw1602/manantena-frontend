@@ -2,8 +2,7 @@ import { Component, OnInit, Inject, LOCALE_ID } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { FormControlService } from '../../services/form-control.service';
-import { SiteOptionsService } from 'src/app/services/site-options.service';
+import { SiteOptionsService } from '@/services/site-options.service';
 
 interface Language {
 	name: string,
@@ -26,7 +25,6 @@ export class NavbarComponent implements OnInit {
 	constructor(
 		public formBuilder: FormBuilder,
 		public router: Router,
-		public formService: FormControlService,
 		public siteOptions: SiteOptionsService,
 		@Inject(LOCALE_ID) protected localeId: string
 	) {
@@ -45,7 +43,7 @@ export class NavbarComponent implements OnInit {
 	get f() { return this.searchForm.controls; }
 
 	onSearch() {
-		if (this.formService.onSubmitCheck(this.searchForm)) {
+		if (this.searchForm.invalid) {
 			return;
 		}
 		
