@@ -1,6 +1,6 @@
 <div class="news">
 	<div class="news-small mb-4" *ngIf="siteOptions.SmallNewses()">
-		<h5 class="list-group-item" i18n="News|Small newses title@@newsSmallNewsesTitle">What's new?</h5>
+		<h4 class="list-group-item" i18n="News|Small newses title@@newsSmallNewsesTitle">What's new?</h4>
 		<ul class="list-group">
 			<div *ngIf="(smallNewses$ | async) as smallNewses">
 				<div *ngFor="let news of smallNewses | reverse; let i = index;">

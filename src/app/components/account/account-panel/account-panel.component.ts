@@ -4,12 +4,13 @@ import { MessageService } from 'primeng/api';
 
 import { LoginService } from '@/services/login.service';
 import { DatabaseService } from '@/services/database.service';
+import { ValidationService } from '@/services/validation.service';
 
 @Component({
 	selector: 'app-account-panel',
 	templateUrl: './account-panel.component.html',
 	styleUrls: ['./account-panel.component.scss'],
-	providers: [LoginService]
+	providers: [LoginService, ValidationService]
 })
 export class AccountPanelComponent implements OnInit {
 	loginForm: FormGroup;
@@ -52,6 +53,6 @@ export class AccountPanelComponent implements OnInit {
 	onLogout() {
 		this.loginService.logout();
 		this.loginForm.reset();
-		this.messageService.add({ severity: 'success', summary: 'Logged Out', detail: 'We will be waiting, user!'});
+		this.messageService.add({ severity: 'success', summary: 'Logged Out', detail: 'We will be waiting!'});
 	}
 }

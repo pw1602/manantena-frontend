@@ -1,4 +1,4 @@
-<h5 class="border-title p-2 rounded" i18n="Account - Details|Account details title@@accountDetailsTitle">Account Informations</h5>
+<h4 class="border-title p-2 rounded" i18n="Account - Details|Account details title@@accountDetailsTitle">Account Informations</h4>
 <table>
 	<thead>
 		<tr>
@@ -8,15 +8,15 @@
 	<tbody *ngIf="(account$ | async) as account">
 		<tr>
 			<td i18n="Account - Details|Account details email address@@accountDetailsEmailAddress">E-mail Address:</td>
-			<td>{{account.email}} <button class="btn btn-sm float-right" i18n="Account - Details|Account details e-mail change button@@accountDetailsEmailAddressChangeButton">Change e-mail</button></td>
+			<td>{{account.email}}</td>
 		</tr>
 		<tr>
 			<td i18n="Account - Details|Account details password@@accountDetailsPassword">Password:</td>
-			<td>********** <button class="btn btn-sm float-right" i18n="Account - Details|Account details password change button@@accountDetailsPasswordChangeButton">Change password</button></td>
+			<td>**********</td>
 		</tr>
 		<tr>
 			<td i18n="Account - Details|Account details recovery code@@accountDetailsRecoveryCode">Recovery Code:</td>
-			<td>{{account.revoceryCode}} <button class="btn btn-sm float-right" i18n="Account - Details|Account details recovery code generate button@@accountDetailsRecoveryCodeGenerateButton">Generate recovery key</button></td>
+			<td>{{account.revoceryCode || "Not generated"}}</td>
 		</tr>
 		<tr>
 			<td i18n="Account - Details|Account details creation date@@accountDetailsCreationDate">Creation Date:</td>
@@ -26,12 +26,19 @@
 			<td i18n="Account - Details|Account details tibia coins amount@@accountDetailsTibiaCoinsAmount">Tibia Coins:</td>
 			<td>{{account.tibiaCoins}}</td>
 		</tr>
+		<tr>
+			<td colspan="2">
+				<button class="btn btn-sm mr-2" i18n="Account - Details|Account details e-mail change button@@accountDetailsEmailAddressChangeButton">Change e-mail</button>
+				<button class="btn btn-sm mr-2" i18n="Account - Details|Account details password change button@@accountDetailsPasswordChangeButton">Change password</button>
+				<button *ngIf="!account.recoveryCode" class="btn btn-sm" i18n="Account - Details|Account details recovery code generate button@@accountDetailsRecoveryCodeGenerateButton">Generate recovery key</button>
+			</td>
+		</tr>
 	</tbody>
 </table>
 
 <br/><br/>
 
-<h5 class="border-title p-2 rounded" i18n="Account - Details|Account details character list title@@accountDetailsCharacterListTitle">Character List</h5>
+<h4 class="border-title p-2 rounded" i18n="Account - Details|Account details character list title@@accountDetailsCharacterListTitle">Character List</h4>
 <table>
 	<thead>
 		<tr>

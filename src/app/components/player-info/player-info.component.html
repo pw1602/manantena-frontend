@@ -3,7 +3,7 @@
 </div>
 
 <div *ngIf="player">
-	<h5 class="border-title p-2 rounded" i18n="Player Info|Player informations title@@playerInfoTitle">Player Informations</h5>
+	<h4 class="border-title p-2 rounded" i18n="Player Info|Player informations title@@playerInfoTitle">Player Informations</h4>
 	<table>
 		<thead>
 			<tr>
@@ -14,15 +14,22 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>{{player.name}}</td>
+				<td>
+					<div class="outfit" [ngStyle]="{'background-image': 'url(' + getOutfit() + ')'}"></div>
+					{{player.name}}
+				</td>
 				<td>{{player.sex == 0 ? "Female" : "Male"}}</td>
 				<td>{{player.level}}</td>
+			</tr>
+			<tr>
+				<td i18n="Player Info|Vocation header in table@@playerInfoVocationHeader">Vocation</td>
+				<td colspan="2">{{getVocation()}}</td>
 			</tr>
 			<tr>
 				<td i18n="Player Info|Health header in table@@playerInfoHealthHeader">Health</td>
 				<td colspan="2">
 					<div class="progress">
-						<div class="progress-bar bg-danger" role="progressbar" [ngStyle]="getBarStyle('hp')">{{player.health}}/{{player.healthmax}}</div>
+						<div class="progress-bar bg-danger" role="progressbar" [ngStyle]="getBarStyle('hp')" data-toggle="tooltip" data-placement="top" title="Max: {{player.healthmax}}">{{player.health}}</div>
 					</div>
 				</td>
 			</tr>
@@ -30,7 +37,7 @@
 				<td>Mana</td>
 				<td colspan="2">
 					<div class="progress">
-						<div class="progress-bar bg-info" role="progressbar" [ngStyle]="getBarStyle('mp')">{{player.mana}}/{{player.manamax}}</div>
+						<div class="progress-bar bg-info" role="progressbar" [ngStyle]="getBarStyle('mp')" data-toggle="tooltip" data-placement="top" title="Max: {{player.manamax}}">{{player.mana}}</div>
 					</div>
 				</td>
 			</tr>
@@ -38,7 +45,7 @@
 				<td>Stamina</td>
 				<td colspan="2">
 					<div class="progress">
-						<div class="progress-bar bg-success" role="progressbar" [ngStyle]="getBarStyle('stamina')">{{getStaminaTime()}} h</div>
+						<div class="progress-bar bg-warning" role="progressbar" [ngStyle]="getBarStyle('stamina')" data-toggle="tooltip" data-placement="top" title="Max: 42:00h">{{getStaminaTime()}} h</div>
 					</div>
 				</td>
 			</tr>
@@ -46,7 +53,7 @@
 				<td i18n="Player Info|Experience header in table@@playerInfoExperienceHeader">Experience</td>
 				<td colspan="2">
 					<div class="progress">
-						<div class="progress-bar bg-warning" role="progressbar" [ngStyle]="getBarStyle('exp')">{{player.experience}}/{{getNextLevelExperience(player.level + 1)}}</div>
+						<div class="progress-bar bg-success" role="progressbar" [ngStyle]="getBarStyle('exp')" data-toggle="tooltip" data-placement="top" title="Next Level: {{getExperienceForLevel(player.level + 1)}}">{{player.experience}}</div>
 					</div>
 				</td>
 			</tr>
@@ -56,7 +63,7 @@
 			</tr>
 			<tr>
 				<td i18n="Player Info|Town header in table@@playerInfoTownHeader">Town</td>
-				<td colspan="2">{{player.town_id == 1 ? "Manantena" : "Example"}}</td>
+				<td colspan="2">Example</td>
 			</tr>
 			<tr>
 				<td i18n="Player Info|Last login header in table@@playerInfoLastLoginHeader">Last Login</td>

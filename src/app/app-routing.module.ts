@@ -22,6 +22,8 @@ import { AccountRefferalsComponent } from './components/account/account-refferal
 import { RegisterComponent } from './components/register/register.component';
 import { RecoverComponent } from './components/recover/recover.component';
 import { ForumComponent } from './components/forum/forum.component';
+import { PlayerInfoResolverService } from './services/player-info-resolver.service';
+import { MessageService } from 'primeng/api';
 
 const routes: Routes = [
 	//{ path: '', redirectTo: '/', pathMatch: 'full' },
@@ -52,7 +54,7 @@ const routes: Routes = [
 	]},
 	{ path: 'player', children: [
 		{ path: '', redirectTo: '/', pathMatch: 'full'},
-		{ path: ':name', component: PlayerInfoComponent }
+		{ path: ':name', component: PlayerInfoComponent, resolve: { player: PlayerInfoResolverService } }
 	]},
 	{ path: 'account', canActivate: [LoginRouteGuard], canLoad: [LoginRouteGuard], children: [
 		{ path: '', redirectTo: 'details', pathMatch: 'full' },
@@ -65,6 +67,7 @@ const routes: Routes = [
 
 @NgModule({
 	imports: [RouterModule.forRoot(routes)],
-	exports: [RouterModule]
+	exports: [RouterModule],
+	providers: [PlayerInfoResolverService]
 })
 export class AppRoutingModule { }
