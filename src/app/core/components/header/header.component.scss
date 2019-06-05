@@ -1,0 +1,41 @@
+@import '@global';
+
+nav {
+	background-color: $bg-darkest-green;
+	border: 2px solid $green-light;
+	border-radius: 5px;
+
+	.nav-item {
+		background-color: $bg-darkest-green;
+	}
+
+	.dropdown-menu {
+		background-color: $bg-darkest-green;
+		border: 1px solid $green-light !important;
+
+		a:hover {
+			background-color: $bg-light-green;
+		}
+
+		.active {
+			background-color: $bg-light-green;
+		}
+	}
+}
+
+:host ::ng-deep {
+	.ui-buttonset {
+		border: 1px solid $green-light;
+	}
+
+	.ui-button {
+		
+		&:not(.ui-state-active) {
+			background-color: $bg-light-green !important;
+		}
+
+		&:hover {
+			background-color: $green-bright !important;
+		}
+	}
+}

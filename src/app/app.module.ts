@@ -11,39 +11,28 @@ import { MessageService } from 'primeng/api';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { RightpanelComponent } from './components/right-panel/right-panel.component';
-import { NewsComponent } from './components/news/news.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { CommunityOnlineComponent } from './components/community/community-online/community-online.component';
-import { PlayerInfoComponent } from './components/player-info/player-info.component';
-import { AccountPanelComponent } from './components/account/account-panel/account-panel.component';
-import { AccountDetailsComponent } from './components/account/account-details/account-details.component';
-import { AccountCreateCharacterComponent } from './components/account/account-create-character/account-create-character.component';
-import { AccountRefferalsComponent } from './components/account/account-refferals/account-refferals.component';
-import { CommunityGuildsComponent } from './components/community/community-guilds/community-guilds.component';
-import { CommunityGalleryComponent } from './components/community/community-gallery/community-gallery.component';
-import { CommunitySupportComponent } from './components/community/community-support/community-support.component';
-import { LibraryRulesComponent } from './components/library/library-rules/library-rules.component';
-import { LibraryFaqComponent } from './components/library/library-faq/library-faq.component';
-import { LibraryServerInformationsComponent } from './components/library/library-server-informations/library-server-informations.component';
-import { LibraryDownloadComponent } from './components/library/library-download/library-download.component';
-import { LibraryAchievementsComponent } from './components/library/library-achievements/library-achievements.component';
-import { RankingTopComponent } from './components/ranking/ranking-top/ranking-top.component';
-import { RankingQuestsComponent } from './components/ranking/ranking-quests/ranking-quests.component';
-import { RankingAchievementsComponent } from './components/ranking/ranking-achievements/ranking-achievements.component';
-import { RankingGuildsComponent } from './components/ranking/ranking-guilds/ranking-guilds.component';
-import { RegisterComponent } from './components/register/register.component';
-import { RecoverComponent } from './components/recover/recover.component';
-import { ForumComponent } from './components/forum/forum.component';
-import { HintsComponent } from './components/hints/hints.component';
-import { AdminPanelComponent } from './components/admin-panel/admin-panel/admin-panel.component';
-import { AdminReportsComponent } from './components/admin-panel/admin-reports/admin-reports.component';
-import { AdminStatisticsComponent } from './components/admin-panel/admin-statistics/admin-statistics.component';
-import { AdminOverviewComponent } from './components/admin-panel/admin-overview/admin-overview.component';
-import { ErrorMessageComponent } from './components/error-message/error-message.component';
+import { RightpanelComponent } from './core/components/right-panel/right-panel.component';
+import { NewsComponent } from './core/components/news/news.component';
+import { NavbarComponent } from '@core/components/header/header.component';
+import { CommunityOnlineComponent } from '@/modules/community/online/community-online.component';
+import { PlayerInfoComponent } from './core/components/player-info/player-info.component';
+import { RegisterComponent } from './core/components/register/register.component';
+import { RecoverComponent } from './core/components/recover/recover.component';
+import { ForumComponent } from './modules/forum/forum.component';
+import { HintsComponent } from './core/components/hints/hints.component';
+import { AdminPanelComponent } from './core/components/admin-panel/admin-panel/admin-panel.component';
+import { AdminReportsComponent } from './core/components/admin-panel/admin-reports/admin-reports.component';
+import { AdminStatisticsComponent } from './core/components/admin-panel/admin-statistics/admin-statistics.component';
+import { AdminOverviewComponent } from './core/components/admin-panel/admin-overview/admin-overview.component';
+import { ErrorMessageComponent } from '@shared/components/error-message/error-message.component';
+import { AccountPanelComponent } from './core/components/account-panel/account-panel.component';
 
-import { ReversePipe } from './pipes/reverse.pipe';
-import { TimePipe } from './pipes/time.pipe';
+import { ReversePipe } from '@shared/pipes/reverse.pipe';
+import { TimePipe } from '@shared/pipes/time.pipe';
+import { CommunityModule } from './modules/community/community.module';
+import { LibraryModule } from './modules/library/library.module';
+import { AccountModule } from './modules/account/account.module';
+import { RankingModule } from './modules/ranking/ranking.module';
 
 @NgModule({
 	declarations: [
@@ -54,22 +43,6 @@ import { TimePipe } from './pipes/time.pipe';
 		CommunityOnlineComponent,
 		PlayerInfoComponent,
 		ReversePipe,
-		AccountPanelComponent,
-		AccountDetailsComponent,
-		AccountCreateCharacterComponent,
-		AccountRefferalsComponent,
-		CommunityGuildsComponent,
-		CommunityGalleryComponent,
-		CommunitySupportComponent,
-		LibraryRulesComponent,
-		LibraryFaqComponent,
-		LibraryServerInformationsComponent,
-		LibraryDownloadComponent,
-		LibraryAchievementsComponent,
-		RankingTopComponent,
-		RankingQuestsComponent,
-		RankingAchievementsComponent,
-		RankingGuildsComponent,
 		RegisterComponent,
 		RecoverComponent,
 		TimePipe,
@@ -79,7 +52,8 @@ import { TimePipe } from './pipes/time.pipe';
 		AdminReportsComponent,
 		AdminStatisticsComponent,
 		AdminOverviewComponent,
-		ErrorMessageComponent
+		ErrorMessageComponent,
+		AccountPanelComponent
 	],
 	imports: [
 		BrowserModule,
@@ -90,7 +64,11 @@ import { TimePipe } from './pipes/time.pipe';
 		BrowserAnimationsModule,
 		PaginatorModule,
 		SelectButtonModule,
-		ToastModule
+		ToastModule,
+		AccountModule,
+		CommunityModule,
+		LibraryModule,
+		RankingModule
 	],
 	providers: [MessageService],
 	bootstrap: [AppComponent]

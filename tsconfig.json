@@ -21,6 +21,21 @@
 	"paths": {
 		"@/*": [
 			"app/*"
+		],
+		"@core/*": [
+			"app/core/*"
+		],
+		"@modules/*": [
+			"app/modules/*"
+		],
+		"@shared/*": [
+			"app/shared/*"
+		],
+		"@configs/*": [
+			"app/configs/*"
+		],
+		"@global": [
+			"app/global.scss"
 		]
 	}
   }
