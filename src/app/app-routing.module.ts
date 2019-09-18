@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { NewsComponent } from './core/components/news/news.component';
-import { PlayerInfoComponent } from './core/components/player-info/player-info.component';
-import { RegisterComponent } from './core/components/register/register.component';
-import { RecoverComponent } from './core/components/recover/recover.component';
+import {
+	NewsComponent,
+	RegisterComponent,
+	RecoverComponent,
+	PlayerInfoComponent
+} from '@core/components';
+
 import { ForumComponent } from './modules/forum/forum.component';
-import { PlayerInfoResolverService } from '@shared/services/player-info-resolver.service';
+import { PlayerInfoResolverService } from '@shared/services';
 
 const routes: Routes = [
 	// { path: '', redirectTo: '/', pathMatch: 'full' },
