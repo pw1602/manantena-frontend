@@ -2,7 +2,7 @@ import { Component, OnInit, Inject, LOCALE_ID } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { SiteOptionsService } from '@shared/services/site-options.service';
+import { SiteOptionsService } from '@shared/services';
 
 interface Language {
 	name: string;

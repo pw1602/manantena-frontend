@@ -2,11 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable, of, Subscriber } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-import { DatabaseService } from './database.service';
-import { LoginService } from './login.service';
-
-import { Account } from '@/core/classes/account';
-import { Permissions } from '@/core/classes/permissions';
+import { DatabaseService } from '@shared/services/database.service';
+import { LoginService } from '@shared/services/login.service';
+import { Account, Permissions } from '@/core/classes';
 
 @Injectable({
 	providedIn: 'root'

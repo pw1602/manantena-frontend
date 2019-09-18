@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { LoginService } from '@shared/services/login.service';
-import { PermissionService } from '@shared/services/permission.service';
+import { LoginService, PermissionService } from '@shared/services';
 
 @Component({
 	selector: 'app-admin-panel',

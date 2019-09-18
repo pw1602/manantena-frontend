@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-import { News, SmallNews } from '@/core/classes/news';
-import { Guild } from '@/core/classes/guild';
-import { Account } from '@/core/classes/account';
-import { Global } from '@/core/classes/global';
-import { Player } from '@/core/classes/player';
-
-import { Permissions } from '@/core/classes/permissions';
+import {
+	News,
+	SmallNews,
+	Guild,
+	Account,
+	Global,
+	Player,
+	Permissions
+} from '@/core/classes';
 
 @Injectable({
 	providedIn: 'root'

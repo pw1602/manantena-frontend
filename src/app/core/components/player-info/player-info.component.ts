@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Player } from '@/core/classes/player';
+import { Player } from '@/core/classes';
 import { MessageService } from 'primeng/api';
 
 @Component({

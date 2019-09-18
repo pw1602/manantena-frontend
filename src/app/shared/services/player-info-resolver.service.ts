@@ -4,7 +4,7 @@ import { Observable, of, EMPTY } from 'rxjs';
 import { mergeMap, take, catchError } from 'rxjs/operators';
 
 import { PlayerService } from '@shared/services/player.service';
-import { Player } from '@/core/classes/player';
+import { Player } from '@/core/classes';
 
 @Injectable({
 	providedIn: 'root'

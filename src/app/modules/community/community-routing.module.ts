@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CommunityOnlineComponent } from './online/community-online.component';
-import { CommunityGuildsComponent } from './guilds/community-guilds.component';
-import { CommunityGalleryComponent } from './gallery/gallery.component';
-import { CommunitySupportComponent } from './support/community-support.component';
+import { CommunityOnlineComponent } from '@modules/community/online/community-online.component';
+import { CommunityGuildsComponent } from '@modules/community/guilds/community-guilds.component';
+import { CommunityGalleryComponent } from '@modules/community/gallery/gallery.component';
+import { CommunitySupportComponent } from '@modules/community/support/community-support.component';
 
 const routes: Routes = [
 	{ path: 'community', children: [

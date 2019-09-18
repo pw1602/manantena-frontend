@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 
-import { LoginService } from '@shared/services/login.service';
-import { DatabaseService } from '@shared/services/database.service';
-import { ValidationService } from '@shared/services/validation.service';
+import { LoginService, DatabaseService, ValidationService } from '@shared/services';
 
 @Component({
 	selector: 'app-account-panel',

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LibraryRulesComponent } from './rules/library-rules.component';
-import { LibraryFaqComponent } from './faq/library-faq.component';
-import { LibraryServerInformationsComponent } from './server-informations/library-server-informations.component';
-import { LibraryDownloadComponent } from './download/library-download.component';
-import { LibraryAchievementsComponent } from './achievements/library-achievements.component';
+import { LibraryRulesComponent } from '@modules/library/rules/library-rules.component';
+import { LibraryFaqComponent } from '@modules/library/faq/library-faq.component';
+import { LibraryServerInformationsComponent } from '@modules/library/server-informations/library-server-informations.component';
+import { LibraryDownloadComponent } from '@modules/library/download/library-download.component';
+import { LibraryAchievementsComponent } from '@modules/library/achievements/library-achievements.component';
 
 const routes: Routes = [
 	{ path: 'library', children: [

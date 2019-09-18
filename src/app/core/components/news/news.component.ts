@@ -2,10 +2,9 @@ import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { shareReplay, filter } from 'rxjs/operators';
 
-import { DatabaseService } from '@shared/services/database.service';
-import { SiteOptionsService } from '@shared/services/site-options.service';
+import { DatabaseService, SiteOptionsService } from '@shared/services';
 
-import { News, SmallNews } from '@core/classes/news';
+import { News, SmallNews } from '@core/classes';
 
 @Component({
 	selector: 'app-news',

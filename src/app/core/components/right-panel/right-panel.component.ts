@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayerService } from '@shared/services/player.service';
 import { Observable } from 'rxjs';
-import { Player } from '@/core/classes/player';
+
+import { PlayerService } from '@shared/services/';
+import { Player } from '@/core/classes';
 
 @Component({
 	selector: 'app-right-panel',

@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-import { Player } from '@core/classes/player';
-import { Global } from '@/core/classes/global';
+import { Player, Global } from '@core/classes';
 
 @Injectable({
 	providedIn: 'root'

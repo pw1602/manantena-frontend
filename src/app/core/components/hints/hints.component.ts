@@ -1,7 +1,7 @@
 import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 
 import { englishHints, polishHints } from '../../mocks/hints-mock';
-import { SiteOptionsService } from '@shared/services/site-options.service';
+import { SiteOptionsService } from '@shared/services';
 
 @Component({
 	selector: 'app-hints',
