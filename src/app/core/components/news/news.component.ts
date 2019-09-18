@@ -22,11 +22,11 @@ export class NewsComponent implements OnInit {
 		@Inject(LOCALE_ID) private localeId: string
 	) { }
 
-	ngOnInit() {
-	}
-
 	newses$: Observable<News[]> = this.db.getNewses(this.localeId).pipe(shareReplay());
 	smallNewses$: Observable<SmallNews[]> = this.db.getSmallNewses(this.localeId).pipe(shareReplay());
+
+	ngOnInit() {
+	}
 
 	/*paginate(event) { // !FIXME Znalezc sposob na paginacje
 		this.db.getNewses(this.localeId).subscribe(newses => this.newsList = this.reversePipe.transform(newses).slice(event.page * this.PAGINATION_MAX_ITEMS, (event.page + 1) * this.PAGINATION_MAX_ITEMS));

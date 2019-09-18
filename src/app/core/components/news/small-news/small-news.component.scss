@@ -1,0 +1,11 @@
+@import 'global';
+
+ul {
+    li {
+        background-color: $bg-light-green;
+
+        .badge {
+            margin-right: 10px;
+        }
+    }
+}

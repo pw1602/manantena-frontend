@@ -19,12 +19,12 @@ export class LoginService {
 	}
 
 	getTokenTime(): number {
-		return parseInt(localStorage.getItem('token_expired_at'));
+		return parseInt(localStorage.getItem('token_expired_at'), 10);
 	}
 
 	login(token: string, time: string) {
 		localStorage.setItem('token', token);
-		localStorage.setItem('token_expired_at', (parseInt(time) / 1000).toString());
+		localStorage.setItem('token_expired_at', (parseInt(time, 10) / 1000).toString());
 	}
 
 	logout() {

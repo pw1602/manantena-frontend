@@ -1,0 +1,7 @@
+<div class="news-big-news" *ngFor="let news of newses | reverse">
+	<h3 class="rounded p-2 pl-4 border-title">#{{news.id}} {{news.title | titlecase}} <span class="badge badge-success" *ngIf="isNew(news.date)">New</span></h3>
+	<blockquote class="blockquote">
+		<p>{{news.content}}</p>
+		<footer class="blockquote-footer">{{news.author}} | {{news.date | date}}</footer>
+	</blockquote>
+</div>

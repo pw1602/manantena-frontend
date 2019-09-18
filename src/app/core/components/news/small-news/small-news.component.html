@@ -1,0 +1,7 @@
+<ul class="list-group">
+	<div *ngFor="let news of newses | reverse; let i = index;">
+		<li class="list-group-item" *ngIf="i < showMax">
+			<span class="badge">{{news.date | date}}</span> {{news.content}} <span class="badge badge-success" *ngIf="isNew(news.date)">New</span>
+		</li>
+	</div>
+</ul>

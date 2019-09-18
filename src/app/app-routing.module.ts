@@ -9,7 +9,7 @@ import { ForumComponent } from './modules/forum/forum.component';
 import { PlayerInfoResolverService } from '@shared/services/player-info-resolver.service';
 
 const routes: Routes = [
-	//{ path: '', redirectTo: '/', pathMatch: 'full' },
+	// { path: '', redirectTo: '/', pathMatch: 'full' },
 	{ path: 'forum', component: ForumComponent },
 	{ path: 'register', component: RegisterComponent },
 	{ path: 'recover', component: RecoverComponent },

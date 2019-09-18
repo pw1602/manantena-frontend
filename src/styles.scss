@@ -5,7 +5,8 @@
 	#051200, #0c1f05, #162c0d, #223819
 */
 
-@import 'app/global.scss';
+@import 'global.scss';
+@import 'palette.scss';
 
 body {
 	background-color: $bg-darkest-green;

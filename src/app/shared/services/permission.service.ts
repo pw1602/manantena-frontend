@@ -9,13 +9,13 @@ import { Account } from '@/core/classes/account';
 import { Permissions } from '@/core/classes/permissions';
 
 @Injectable({
-  	providedIn: 'root'
+	providedIn: 'root'
 })
 export class PermissionService {
 	account: Account;
 	permissions: Permissions;
 
-  	constructor(
+	constructor(
 		private http: HttpClient,
 		private db: DatabaseService,
 		private loginService: LoginService
@@ -37,6 +37,6 @@ export class PermissionService {
 
 	hasPermission(permission: string): boolean {
 		this.updatePermissions();
-		return this.permissions.flags[permission];
+		return this.permissions ? this.permissions.flags[permission] : false;
 	}
 }

@@ -1,4 +1,4 @@
-@import '../global.scss';
+@import 'global';
 
 .news-small {
 	text-align: left;
@@ -8,30 +8,6 @@
         text-align: center;
         background-color: $bg-dark-green;
     }
-
-    li {
-        background-color: $bg-light-green;
-
-        .badge {
-            margin-right: 10px;
-        }
-    }
-}
-
-.news-big-news {
-    h3 {
-        text-align: left;
-	}
-
-    .blockquote-footer {
-        font-size: 12px;
-	}
-	
-	p {
-		text-align: justify;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
 }
 
 :host ::ng-deep {

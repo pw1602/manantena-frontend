@@ -33,9 +33,6 @@
 		],
 		"@configs/*": [
 			"app/configs/*"
-		],
-		"@global": [
-			"app/global.scss"
 		]
 	}
   }
