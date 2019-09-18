@@ -1,0 +1,38 @@
+@import 'global';
+
+.news-small {
+	text-align: left;
+	border: 1px solid $green-light;
+
+    h4 {
+        text-align: center;
+        background-color: $bg-dark-green;
+    }
+}
+
+:host ::ng-deep {
+	.ui-paginator {
+		background-color: $bg-dark-green;
+		border: 1px solid $green-light;
+
+		.ui-paginator-first, .ui-paginator-prev, .ui-paginator-next, .ui-paginator-last {
+			&:hover{
+				color: $green-bright !important;
+				background-color: $green-light !important;
+			}
+		}
+
+		.ui-paginator-page {
+			color: white !important;
+	
+			&.ui-state-active {
+				background-color: $green-light !important;
+			}
+
+			&:hover{
+				color: $green-bright !important;
+				background-color: $green-light !important;
+			}
+		}
+	}
+}

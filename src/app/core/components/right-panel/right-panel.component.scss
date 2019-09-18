@@ -1,0 +1,20 @@
+@import 'global';
+
+.info {
+    width: 29%;
+    float: right;
+
+    ul {
+		text-align: left;
+    }
+}
+
+.info-raid {
+    li {
+		background-color: $bg-light-green;
+
+        .badge {
+            margin-right: 10px;
+        }
+    }
+}

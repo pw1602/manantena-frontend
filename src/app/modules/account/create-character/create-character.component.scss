@@ -1,0 +1,24 @@
+@import 'global';
+
+form {
+	text-align: left;
+}
+
+.modal-content {
+	background-color: $bg-darkest-green;
+	border: 2px solid $green-light;
+
+	.modal-header {
+		background-color: $bg-dark-green;
+		border-bottom: 1px solid $green-light;
+	}
+
+	.modal-footer {
+		background-color: $bg-dark-green;
+		border-top: 1px solid $green-light;
+	}
+
+	.close {
+		color: white;
+	}
+}

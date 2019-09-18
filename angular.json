@@ -31,7 +31,12 @@
               "./node_modules/primeng/resources/themes/luna-green/theme.css",
               "./node_modules/primeng/resources/primeng.min.css",
               "src/styles.scss"
-            ],
+			],
+			"stylePreprocessorOptions": {
+				"includePaths": [
+					"src/scss"
+				]
+			},
             "scripts": []
           },
           "configurations": {

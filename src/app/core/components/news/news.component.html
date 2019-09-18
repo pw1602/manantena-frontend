@@ -1,0 +1,15 @@
+<div class="news">
+	<div class="news-small mb-4" *ngIf="siteOptions.SmallNewses()">
+		<h4 class="list-group-item" i18n="News|Small newses title@@newsSmallNewsesTitle">What's new?</h4>
+		<div *ngIf="(smallNewses$ | async) as smallNewses">
+			<app-small-news [newses]="smallNewses" [showMax]="SMALL_NEWSES_MAX_ITEMS"></app-small-news>
+		</div>
+	</div>
+
+	<div class="news-big">
+		<div *ngIf="(newses$ | async) as newses">
+			<app-big-news [newses]="newses"></app-big-news>
+			<p-paginator [rows]="PAGINATION_MAX_ITEMS" [totalRecords]="newses.length" [pageLinkSize]="getPageLinkSize(newses.length)" [alwaysShow]="false"></p-paginator> <!-- (onPageChange)="paginate($event)" -->
+		</div>
+	</div>
+</div>
